@@ -7,16 +7,22 @@ recent video (views/hour ÷ that channel's own median views/hour), and
 sends a Telegram alert the moment a video crosses the threshold.
 
 Uses the free YouTube Data API v3 — NOT vidIQ — so it has no credit limits
-and can run as often as you like within YouTube's free daily quota
-(10,000 units/day; this script costs roughly 3 units per channel per run,
-so checking 6 channels every 30 minutes costs ~864 units/day — comfortably
-inside the free tier even checking every 10 minutes).
+and can run as often as you like within YouTube's free daily quota.
+
+Maintains TWO state files:
+  - outlier_state.json — dedup memory (which videos have been alerted on,
+    at what score) so the same breakout doesn't spam you every 30 minutes.
+  - alerts_log.json — a permanent, append-only log of every alert ever
+    sent, capped at the last 200 entries. This is what lets the War Room
+    dashboard (or anything else) see "what has the bot caught since I last
+    checked", not just "what's happening right now."
 
 Add or remove channels by editing channels.json — no code changes needed.
 """
 
 import json
 import os
+import datetime
 import urllib.request
 import urllib.parse
 
@@ -24,14 +30,13 @@ API_KEY = os.environ.get("YOUTUBE_API_KEY")
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-# Alert when a video's VPH is this many times its channel's own median VPH
 OUTLIER_THRESHOLD = float(os.environ.get("OUTLIER_THRESHOLD", "3.0"))
-
-# Only look at videos published within this many hours (avoids re-scoring old catalog)
 MAX_VIDEO_AGE_HOURS = 24 * 45  # 45 days
+MAX_LOG_ENTRIES = 200
 
 CHANNELS_FILE = "channels.json"
 STATE_FILE = "outlier_state.json"
+LOG_FILE = "alerts_log.json"
 
 BASE = "https://www.googleapis.com/youtube/v3/"
 
@@ -45,21 +50,16 @@ def yt_get(path, params):
         return json.loads(resp.read().decode())
 
 
-def load_channels():
-    with open(CHANNELS_FILE, "r") as f:
-        return json.load(f)
-
-
-def load_state():
-    if os.path.exists(STATE_FILE):
-        with open(STATE_FILE, "r") as f:
+def load_json(path, default):
+    if os.path.exists(path):
+        with open(path, "r") as f:
             return json.load(f)
-    return {}
+    return default
 
 
-def save_state(state):
-    with open(STATE_FILE, "w") as f:
-        json.dump(state, f, indent=2)
+def save_json(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
 
 
 def send_telegram(message):
@@ -82,7 +82,6 @@ def send_telegram(message):
 
 
 def iso_to_epoch_hours_ago(published_at):
-    import datetime
     dt = datetime.datetime.strptime(published_at, "%Y-%m-%dT%H:%M:%SZ")
     dt = dt.replace(tzinfo=datetime.timezone.utc)
     now = datetime.datetime.now(datetime.timezone.utc)
@@ -90,7 +89,6 @@ def iso_to_epoch_hours_ago(published_at):
 
 
 def get_channel_videos(channel_id, max_results=50):
-    """Return recent videos with view counts and computed VPH."""
     ch = yt_get("channels", {"part": "contentDetails", "id": channel_id})
     items = ch.get("items", [])
     if not items:
@@ -106,7 +104,6 @@ def get_channel_videos(channel_id, max_results=50):
         return []
 
     videos = []
-    # videos.list accepts at most 50 ids per call — batch if max_results ever exceeds 50
     for i in range(0, len(video_ids), 50):
         batch_ids = video_ids[i:i + 50]
         vids = yt_get(
@@ -140,10 +137,18 @@ def median(values):
     return s[mid] if n % 2 else (s[mid - 1] + s[mid]) / 2
 
 
+def append_log(log, entry):
+    log.append(entry)
+    if len(log) > MAX_LOG_ENTRIES:
+        log[:] = log[-MAX_LOG_ENTRIES:]
+
+
 def main():
-    channels = load_channels()
-    state = load_state()
+    channels = load_json(CHANNELS_FILE, [])
+    state = load_json(STATE_FILE, {})
+    log = load_json(LOG_FILE, [])
     new_alerts = 0
+    run_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
     for ch in channels:
         name = ch["name"]
@@ -154,43 +159,9 @@ def main():
             print(f"Failed to fetch {name}: {e}")
             continue
 
-        # only score videos published within the age window
         recent = [v for v in videos if v["age_hours"] <= MAX_VIDEO_AGE_HOURS]
         if len(recent) < 2:
             continue
 
         for video in recent:
             others_vph = [v["vph"] for v in recent if v["id"] != video["id"]]
-            baseline = median(others_vph) if others_vph else video["vph"]
-            score = video["vph"] / baseline if baseline > 0 else 1.0
-            video["score"] = round(score, 2)
-
-        # find outliers above threshold, not already alerted at this score tier
-        for video in recent:
-            if video["score"] < OUTLIER_THRESHOLD:
-                continue
-            vid = video["id"]
-            prev_score = state.get(vid, {}).get("last_alerted_score", 0)
-            # re-alert if score has grown meaningfully since last alert (catches videos still climbing)
-            if prev_score and video["score"] < prev_score * 1.3:
-                continue
-
-            own_tag = "🟦 YOUR VIDEO" if ch.get("is_own") else ""
-            message = (
-                f"🚨 <b>Outlier detected</b> {own_tag}\n\n"
-                f"<b>{name}</b>\n"
-                f"{video['title']}\n\n"
-                f"Score: <b>{video['score']}×</b> channel average\n"
-                f"Views: {video['views']:,} · Age: {video['age_hours']:.1f}h\n"
-                f"https://www.youtube.com/watch?v={vid}"
-            )
-            send_telegram(message)
-            new_alerts += 1
-            state[vid] = {"last_alerted_score": video["score"], "channel": name, "title": video["title"]}
-
-    save_state(state)
-    print(f"Done. {new_alerts} alert(s) sent this run.")
-
-
-if __name__ == "__main__":
-    main()
