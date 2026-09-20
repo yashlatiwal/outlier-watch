@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "outlier-watch-bot"
           git config user.email "actions@github.com"
-          git add outlier_state.json
-          git diff --quiet --cached || git commit -m "Update outlier state"
+          git add outlier_state.json alerts_log.json
+          git diff --quiet --cached || git commit -m "Update outlier state and log"
           git push
