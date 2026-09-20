@@ -1,0 +1,37 @@
+name: Outlier Watch — check for breakout videos
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch: {}       # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run outlier watch
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OUTLIER_THRESHOLD: "3.0"
+        run: python outlier_watch.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "outlier-watch-bot"
+          git config user.email "actions@github.com"
+          git add outlier_state.json
+          git diff --quiet --cached || git commit -m "Update outlier state"
+          git push
