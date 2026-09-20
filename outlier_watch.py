@@ -28,7 +28,7 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 OUTLIER_THRESHOLD = float(os.environ.get("OUTLIER_THRESHOLD", "3.0"))
 
 # Only look at videos published within this many hours (avoids re-scoring old catalog)
-MAX_VIDEO_AGE_HOURS = 24 * 14  # 14 days
+MAX_VIDEO_AGE_HOURS = 24 * 45  # 45 days
 
 CHANNELS_FILE = "channels.json"
 STATE_FILE = "outlier_state.json"
@@ -89,7 +89,7 @@ def iso_to_epoch_hours_ago(published_at):
     return (now - dt).total_seconds() / 3600
 
 
-def get_channel_videos(channel_id, max_results=15):
+def get_channel_videos(channel_id, max_results=50):
     """Return recent videos with view counts and computed VPH."""
     ch = yt_get("channels", {"part": "contentDetails", "id": channel_id})
     items = ch.get("items", [])
@@ -105,27 +105,29 @@ def get_channel_videos(channel_id, max_results=15):
     if not video_ids:
         return []
 
-    vids = yt_get(
-        "videos",
-        {"part": "snippet,statistics", "id": ",".join(video_ids)},
-    )
-
     videos = []
-    for v in vids.get("items", []):
-        published_at = v["snippet"]["publishedAt"]
-        age_hours = max(iso_to_epoch_hours_ago(published_at), 0.1)
-        views = int(v["statistics"].get("viewCount", 0))
-        vph = views / age_hours
-        videos.append(
-            {
-                "id": v["id"],
-                "title": v["snippet"]["title"],
-                "published_at": published_at,
-                "age_hours": age_hours,
-                "views": views,
-                "vph": vph,
-            }
+    # videos.list accepts at most 50 ids per call — batch if max_results ever exceeds 50
+    for i in range(0, len(video_ids), 50):
+        batch_ids = video_ids[i:i + 50]
+        vids = yt_get(
+            "videos",
+            {"part": "snippet,statistics", "id": ",".join(batch_ids)},
         )
+        for v in vids.get("items", []):
+            published_at = v["snippet"]["publishedAt"]
+            age_hours = max(iso_to_epoch_hours_ago(published_at), 0.1)
+            views = int(v["statistics"].get("viewCount", 0))
+            vph = views / age_hours
+            videos.append(
+                {
+                    "id": v["id"],
+                    "title": v["snippet"]["title"],
+                    "published_at": published_at,
+                    "age_hours": age_hours,
+                    "views": views,
+                    "vph": vph,
+                }
+            )
     return videos
 
 
