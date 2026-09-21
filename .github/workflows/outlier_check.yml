@@ -1,37 +1,49 @@
-name: Outlier Watch — check for breakout videos
+name: Outlier Watch
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # every 30 minutes
-  workflow_dispatch: {}       # manual trigger from the Actions tab
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: outlier-watch
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
-      - name: Run outlier watch
+      - name: Run Outlier Watch
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          OUTLIER_THRESHOLD: "3.0"
+          FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
         run: python outlier_watch.py
 
-      - name: Commit updated state
+      # Every output file must be listed here, or it is created and then thrown away.
+      - name: Save data files
+        if: always()
         run: |
           git config user.name "outlier-watch-bot"
-          git config user.email "actions@github.com"
-          git add outlier_state.json alerts_log.json
-          git diff --quiet --cached || git commit -m "Update outlier state and log"
+          git config user.email "actions@users.noreply.github.com"
+          for f in outlier_state.json alerts_log.json history.json docs/dashboard_data.json; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No data changes to save"
+            exit 0
+          fi
+          git commit -m "data: update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase
           git push
