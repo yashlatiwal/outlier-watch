@@ -1,0 +1,23 @@
+{
+  "_help": "Tier decides how loud a channel is. own = you. direct = same niche as you. reference = big or general channels you learn from. Edit a name below to change its tier. Names must match channels.json exactly (capitals do not matter). A channel missing from this list is treated as direct.",
+  "tier_settings": {
+    "own":       {"threshold": 2.0, "min_views": 300,  "notify_threshold": 2.0},
+    "direct":    {"threshold": 2.5, "min_views": 500,  "notify_threshold": 2.5},
+    "reference": {"threshold": 4.0, "min_views": 5000, "notify_threshold": 8.0}
+  },
+  "channels": {
+    "SSC English With Yash": "own",
+    "Kashish Bhatt Academy": "direct",
+    "Apni Pariksha": "direct",
+    "Study Focus For Exams": "direct",
+    "Unfilterd Banda SSC": "direct",
+    "Learn English with Nirbhay": "direct",
+    "QEng": {"tier": "reference", "threshold": 3.0, "notify_threshold": 4.0},
+    "Gagan Pratap Maths": {"tier": "reference", "notify_threshold": 10.0},
+    "Aman sir English": "reference",
+    "Nimisha Bansal": "reference",
+    "English With Rani Mam": "reference",
+    "English Madhyam": "reference",
+    "The Complete English (Sapna Mam)": "reference"
+  }
+}

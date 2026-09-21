@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>War Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --board: #eef1f6;
+  --sheet: #ffffff;
+  --ink: #0f1b2d;
+  --pencil: #5b6778;
+  --rule: #d5dbe6;
+  --tint: #f4f6fa;
+  --own: #2143e8;
+  --hot: #d6336c;
+  --ref: #6b7686;
+  --warn-bg: #fff4d6;
+  --warn-ink: #7a5200;
+  --bad-bg: #fde4e8;
+  --bad-ink: #9b1c3a;
+  --good: #1f8a5b;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --board: #0a1120;
+    --sheet: #111a2e;
+    --ink: #e9eef8;
+    --pencil: #97a4ba;
+    --rule: #26324b;
+    --tint: #16213a;
+    --own: #7a96ff;
+    --hot: #ff6b9a;
+    --ref: #8b97ab;
+    --warn-bg: #3a2e0d;
+    --warn-ink: #f2cf7a;
+    --bad-bg: #431624;
+    --bad-ink: #ffb3c4;
+    --good: #4cc48d;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--board); color: var(--ink);
+  font-family: var(--body); font-size: 15px; line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--own); outline-offset: 2px; border-radius: 3px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 20px 20px 64px; }
+
+/* top bar */
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.brand { font-family: var(--display); font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; }
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; color: var(--pencil); font-size: 0.875rem; }
+.status .ok::before, .status .stale::before {
+  content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  margin-right: 6px; background: var(--good);
+}
+.status .stale::before { background: var(--hot); }
+.notice { margin: 16px 0 0; padding: 10px 14px; border-radius: 6px; font-size: 0.9rem; }
+.notice.warn { background: var(--warn-bg); color: var(--warn-ink); }
+.notice.bad { background: var(--bad-bg); color: var(--bad-ink); }
+
+/* hero */
+.hero { padding: 40px 0 28px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12;
+  font-size: clamp(1.75rem, 4.6vw, 2.75rem); margin: 0; max-width: 24ch;
+}
+.hero p { margin: 14px 0 0; font-size: 1.05rem; color: var(--pencil); max-width: 60ch; }
+.hero p b { color: var(--ink); font-weight: 600; }
+.hero p .late { color: var(--hot); font-weight: 600; }
+
+/* sections */
+section { margin-top: 44px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.3rem; letter-spacing: -0.01em; margin: 0; }
+.sub { color: var(--pencil); margin: 4px 0 0; max-width: 70ch; font-size: 0.9rem; }
+.head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 20px; margin-bottom: 10px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--sheet); }
+.seg button {
+  font: inherit; font-size: 0.85rem; color: var(--pencil); background: none; border: 0;
+  padding: 6px 12px; cursor: pointer;
+}
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--board); font-weight: 600; }
+
+/* rows */
+.list { border-top: 1px solid var(--rule); }
+.row {
+  display: grid; grid-template-columns: 36px minmax(0, 1fr) 270px 70px; gap: 6px 18px;
+  align-items: center; padding: 14px 0; border-bottom: 1px solid var(--rule);
+}
+.row.own { background: linear-gradient(90deg, color-mix(in srgb, var(--own) 9%, transparent), transparent 70%); }
+.logo { width: 36px; height: 36px; border-radius: 50%; background: var(--tint); object-fit: cover; display: block; }
+.title { font-weight: 600; line-height: 1.3; display: block; overflow-wrap: anywhere; }
+.meta { display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 3px; color: var(--pencil); font-size: 0.85rem; }
+.tag { display: inline-flex; align-items: center; gap: 5px; }
+.tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--ref); }
+.tag.own::before { background: var(--own); }
+.tag.direct::before { background: var(--hot); }
+.scorebox { font-family: var(--display); font-weight: 800; font-size: 1.55rem; letter-spacing: -0.02em; text-align: right; line-height: 1; }
+.scorebox small { display: block; font-family: var(--body); font-weight: 400; font-size: 0.72rem; color: var(--pencil); letter-spacing: 0; margin-top: 4px; }
+.plain { grid-template-columns: 36px minmax(0, 1fr) 90px; }
+.chip {
+  display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 600;
+  background: var(--tint); color: var(--pencil); white-space: nowrap;
+}
+.chip.hit { background: color-mix(in srgb, var(--hot) 16%, transparent); color: var(--hot); }
+.chip.mine { background: color-mix(in srgb, var(--own) 16%, transparent); color: var(--own); }
+
+/* the score ruler: a bubble on a log scale, 1x is normal */
+.ruler { position: relative; height: 34px; }
+.ruler .track { position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: var(--rule); }
+.ruler .tick { position: absolute; top: 7px; width: 1px; height: 10px; background: var(--rule); }
+.ruler .tick.one { background: var(--pencil); height: 14px; top: 5px; }
+.ruler .lab { position: absolute; top: 20px; transform: translateX(-50%); font-size: 0.68rem; color: var(--pencil); }
+.ruler .line { position: absolute; top: 3px; width: 2px; height: 18px; background: var(--hot); border-radius: 1px; }
+.ruler .fill { position: absolute; left: 20%; top: 10px; height: 4px; background: var(--dot, var(--hot)); border-radius: 2px; opacity: 0.35; }
+.ruler .dot {
+  position: absolute; top: 4px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+  background: var(--dot, var(--hot)); box-shadow: 0 0 0 3px var(--sheet);
+}
+.ruler.animate .dot, .ruler.animate .fill { transition: left 0.9s cubic-bezier(.2,.8,.2,1), width 0.9s cubic-bezier(.2,.8,.2,1); }
+@media (prefers-reduced-motion: reduce) { .ruler.animate .dot, .ruler.animate .fill { transition: none; } }
+
+/* table */
+.tablewrap { overflow-x: auto; border-top: 1px solid var(--rule); }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
+th { text-align: left; font-weight: 500; color: var(--pencil); font-size: 0.82rem; padding: 10px 12px 8px 0; white-space: nowrap; }
+td { padding: 11px 12px 11px 0; border-top: 1px solid var(--rule); vertical-align: middle; }
+th.num, td.num { text-align: right; padding-right: 18px; }
+tr.own td { background: color-mix(in srgb, var(--own) 7%, transparent); }
+.who { display: flex; align-items: center; gap: 10px; min-width: 190px; }
+.who .name { font-weight: 600; line-height: 1.2; }
+.who .tag { font-size: 0.8rem; color: var(--pencil); font-weight: 400; }
+.delta { font-weight: 600; }
+.delta.up { color: var(--good); }
+.delta.down { color: var(--hot); }
+.small { color: var(--pencil); font-size: 0.8rem; font-weight: 400; display: block; }
+svg.spark { display: block; margin-left: auto; }
+svg.spark polyline { fill: none; stroke: var(--own); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+
+/* notes */
+.notes { display: grid; gap: 26px; }
+.note h3 { font-family: var(--display); font-size: 1.05rem; margin: 0 0 6px; }
+.note dl { margin: 0; border-top: 1px solid var(--rule); }
+.note .item { padding: 12px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 4px 24px; }
+.note dt { font-weight: 600; }
+.note dt .chip { margin-top: 6px; display: table; }
+.note dd { margin: 0; max-width: 68ch; }
+.stale-note { color: var(--hot); font-weight: 600; }
+
+.empty { padding: 26px 0; color: var(--pencil); border-bottom: 1px solid var(--rule); max-width: 60ch; }
+.foot { margin-top: 56px; color: var(--pencil); font-size: 0.82rem; max-width: 70ch; }
+
+@media (max-width: 760px) {
+  .row { grid-template-columns: 36px minmax(0, 1fr) 64px; }
+  .row .ruler { grid-column: 1 / -1; grid-row: 2; margin: 2px 6px 0 6px; }
+  .note .item { grid-template-columns: 1fr; }
+  .hero { padding-top: 28px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <div class="brand">War Room</div>
+    <div class="status" id="status" aria-live="polite"></div>
+  </div>
+  <div id="notices"></div>
+
+  <div class="hero">
+    <h1 id="headline">Loading the latest data</h1>
+    <p id="subline"></p>
+  </div>
+
+  <section id="breakouts">
+    <div class="head">
+      <div>
+        <h2>Breakouts</h2>
+        <p class="sub">The score compares a video's views with what the same channel's other videos had at the same age. 1× is normal. The red line is the alert line for that channel.</p>
+      </div>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Channels to show" id="segTier">
+          <button data-v="mine" aria-pressed="true">You and competitors</button>
+          <button data-v="all" aria-pressed="false">Everyone</button>
+        </div>
+        <div class="seg" role="group" aria-label="Time window" id="segWin">
+          <button data-v="3" aria-pressed="false">3 days</button>
+          <button data-v="7" aria-pressed="true">7 days</button>
+          <button data-v="30" aria-pressed="false">30 days</button>
+        </div>
+      </div>
+    </div>
+    <div id="breakList" class="list"></div>
+  </section>
+
+  <section id="latest">
+    <div class="head">
+      <div>
+        <h2>Latest uploads</h2>
+        <p class="sub">Newest first. Views per hour is total views divided by hours since posting.</p>
+      </div>
+    </div>
+    <div id="latestList" class="list"></div>
+  </section>
+
+  <section id="channels">
+    <div class="head">
+      <div>
+        <h2>Channels</h2>
+        <p class="sub">Changes come from a daily snapshot the bot saves. If a window says a few days, that is how much history exists so far.</p>
+      </div>
+    </div>
+    <div class="tablewrap"><table id="chTable"></table></div>
+  </section>
+
+  <section id="notesSec" hidden>
+    <div class="head">
+      <div>
+        <h2>Analysis notes</h2>
+        <p class="sub" id="notesIntro"></p>
+      </div>
+    </div>
+    <div class="notes" id="notes"></div>
+  </section>
+
+  <section id="alertsSec">
+    <div class="head">
+      <div>
+        <h2>Bot alerts</h2>
+        <p class="sub">Every breakout the bot logged. A checkmark means it also sent you a Telegram message.</p>
+      </div>
+    </div>
+    <div id="alertList" class="list"></div>
+  </section>
+
+  <p class="foot" id="foot"></p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var DATA = null, NOTES = null;
+  var state = { tier: "mine", win: 7 };
+  var TIER_LABEL = { own: "You", direct: "Direct", reference: "Reference" };
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  };
+  var nf = new Intl.NumberFormat("en-IN");
+  var fmt = function (n) { return n == null ? "-" : nf.format(Math.round(n)); };
+  function compact(n) {
+    if (n == null) return "hidden";
+    if (n >= 1e7) return (n / 1e7).toFixed(2).replace(/\.?0+$/, "") + " Cr";
+    if (n >= 1e5) return (n / 1e5).toFixed(2).replace(/\.?0+$/, "") + " L";
+    if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 1 : 2).replace(/\.?0+$/, "") + "K";
+    return String(n);
+  }
+  function ago(iso) {
+    var h = (Date.now() - new Date(iso).getTime()) / 3600000;
+    if (h < 1) return Math.max(1, Math.round(h * 60)) + " min ago";
+    if (h < 48) return Math.round(h) + " h ago";
+    return Math.round(h / 24) + " days ago";
+  }
+  function age(h) {
+    if (h < 1) return Math.max(1, Math.round(h * 60)) + " min old";
+    if (h < 48) return Math.round(h) + " h old";
+    return Math.round(h / 24) + " days old";
+  }
+  function ist(iso) {
+    return new Date(iso).toLocaleString("en-IN", { timeZone: "Asia/Kolkata", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" }) + " IST";
+  }
+  function chan(id) { return DATA.channels.filter(function (c) { return c.id === id; })[0]; }
+  function inScope(tier) { return state.tier === "all" || tier === "own" || tier === "direct"; }
+  function url(id) { return "https://www.youtube.com/watch?v=" + encodeURIComponent(id); }
+
+  /* ---- score ruler: log scale 0.5x to 16x ---- */
+  function pos(x) { return Math.max(0, Math.min(1, (Math.log2(Math.max(x, 0.5)) + 1) / 5)) * 100; }
+  function ruler(score, thr, tier) {
+    var color = tier === "own" ? "var(--own)" : tier === "direct" ? "var(--hot)" : "var(--ref)";
+    var ticks = "";
+    [1, 2, 4, 8, 16].forEach(function (t) {
+      ticks += '<span class="tick' + (t === 1 ? " one" : "") + '" style="left:' + pos(t) + '%"></span>' +
+               '<span class="lab" style="left:' + pos(t) + '%">' + t + "×</span>";
+    });
+    var final = pos(score);
+    return '<div class="ruler animate" role="img" style="--dot:' + color + '" aria-label="Score ' + score.toFixed(1) +
+           ' times normal, alert line ' + thr + ' times" data-final="' + final + '">' +
+           '<span class="track"></span>' + ticks +
+           '<span class="line" style="left:' + pos(thr) + '%"></span>' +
+           '<span class="fill" style="left:' + pos(1) + '%;width:0"></span>' +
+           '<span class="dot" style="left:' + pos(1) + '%"></span></div>';
+  }
+  function animateRulers(root) {
+    var els = root.querySelectorAll(".ruler.animate");
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        els.forEach(function (el) {
+          var f = parseFloat(el.getAttribute("data-final")), start = pos(1);
+          el.querySelector(".dot").style.left = f + "%";
+          var fill = el.querySelector(".fill");
+          fill.style.left = Math.min(start, f) + "%";
+          fill.style.width = Math.abs(f - start) + "%";
+        });
+      });
+    });
+  }
+
+  /* ---- sections ---- */
+  function renderStatus() {
+    var hrs = (Date.now() - new Date(DATA.generated_at).getTime()) / 3600000;
+    var stale = hrs > 4;
+    $("status").innerHTML =
+      '<span class="' + (stale ? "stale" : "ok") + '">' + (stale ? "Bot has not updated" : "Bot running") + "</span>" +
+      '<span title="' + esc(ist(DATA.generated_at)) + '">Updated ' + esc(ago(DATA.generated_at)) + "</span>" +
+      "<span>" + DATA.run.channels_ok + " of " + DATA.run.channels_total + " channels read</span>";
+    var n = "";
+    if (stale) {
+      n += '<div class="notice bad" role="alert">No fresh data for ' + Math.round(hrs) + ' hours. Open the Actions tab on GitHub and check the last run of Outlier Watch.</div>';
+    }
+    if (DATA.run.failed && DATA.run.failed.length) {
+      n += '<div class="notice warn">Could not read: ' + DATA.run.failed.map(function (f) { return esc(f.name); }).join(", ") +
+           ". Check the channel_id in channels.json.</div>";
+    }
+    $("notices").innerHTML = n;
+  }
+
+  function renderHero() {
+    var cutoff = 72;
+    var hits = DATA.videos.filter(function (v) {
+      var c = chan(v.cid);
+      return v.brk && v.age_h <= cutoff && c && (c.tier === "own" || c.tier === "direct");
+    });
+    var own = DATA.channels.filter(function (c) { return c.own; })[0];
+    var h;
+    if (hits.length === 0) h = "No breakouts among your competitors in the last 3 days.";
+    else if (hits.length === 1) h = "One competitor video is breaking out right now.";
+    else h = hits.length + " competitor videos are breaking out right now.";
+    $("headline").textContent = h;
+    var parts = [];
+    if (hits.length) {
+      hits.sort(function (a, b) { return b.score - a.score; });
+      var t = hits[0], tc = chan(t.cid);
+      parts.push("Strongest: <b>" + esc(tc.name) + "</b>, " + t.score.toFixed(1) + "× its normal pace, " + fmt(t.views) + " views in " + esc(age(t.age_h).replace(" old", "")) + ".");
+    }
+    if (own && own.last_upload) {
+      var d = Math.floor((Date.now() - new Date(own.last_upload).getTime()) / 86400000);
+      var msg = d === 0 ? "You posted today." : "Your last upload was " + d + (d === 1 ? " day" : " days") + " ago.";
+      parts.push(d >= 5 ? '<span class="late">' + msg + "</span>" : msg);
+    }
+    $("subline").innerHTML = parts.join(" ");
+  }
+
+  function renderBreakouts() {
+    var vids = DATA.videos.filter(function (v) {
+      var c = chan(v.cid);
+      return v.brk && c && inScope(c.tier) && v.age_h <= state.win * 24;
+    }).sort(function (a, b) { return b.score - a.score; }).slice(0, 15);
+    if (!vids.length) {
+      $("breakList").innerHTML = '<div class="empty">Nothing above the alert line in this window. Try a longer window, or switch to Everyone to include reference channels.</div>';
+      return;
+    }
+    $("breakList").innerHTML = vids.map(function (v) {
+      var c = chan(v.cid);
+      return '<div class="row' + (c.own ? " own" : "") + '">' +
+        '<img class="logo" src="' + esc(c.thumb) + '" alt="" loading="lazy">' +
+        '<div><a class="title" href="' + url(v.id) + '" target="_blank" rel="noopener">' + esc(v.t) + "</a>" +
+        '<div class="meta"><span class="tag ' + c.tier + '">' + esc(c.name) + "</span><span>" + esc(age(v.age_h)) +
+        "</span><span>" + fmt(v.views) + " views</span><span>" + fmt(v.vph) + " per hour</span>" +
+        (v.fmt === "short" ? "<span>Short</span>" : "") + "</div></div>" +
+        ruler(v.score, c.thr, c.tier) +
+        '<div class="scorebox">' + v.score.toFixed(1) + "×" +
+        (v.exp ? "<small>usual " + fmt(v.exp) + "</small>" : "") + "</div></div>";
+    }).join("");
+    animateRulers($("breakList"));
+  }
+
+  function renderLatest() {
+    var vids = DATA.videos.filter(function (v) {
+      var c = chan(v.cid); return c && inScope(c.tier);
+    }).sort(function (a, b) { return new Date(b.pub) - new Date(a.pub); }).slice(0, 14);
+    if (!vids.length) { $("latestList").innerHTML = '<div class="empty">No uploads in the data yet.</div>'; return; }
+    $("latestList").innerHTML = vids.map(function (v) {
+      var c = chan(v.cid);
+      var chip = v.brk ? '<span class="chip hit">' + v.score.toFixed(1) + "×</span>"
+        : v.score != null ? '<span class="chip' + (c.own ? " mine" : "") + '">' + v.score.toFixed(1) + "×</span>"
+        : '<span class="chip">no score</span>';
+      return '<div class="row plain' + (c.own ? " own" : "") + '">' +
+        '<img class="logo" src="' + esc(c.thumb) + '" alt="" loading="lazy">' +
+        '<div><a class="title" href="' + url(v.id) + '" target="_blank" rel="noopener">' + esc(v.t) + "</a>" +
+        '<div class="meta"><span class="tag ' + c.tier + '">' + esc(c.name) + "</span><span>" + esc(age(v.age_h)) +
+        "</span><span>" + fmt(v.views) + " views</span><span>" + fmt(v.vph) + " per hour</span>" +
+        (v.fmt === "short" ? "<span>Short</span>" : "") + "</div></div>" +
+        '<div style="text-align:right">' + chip + "</div></div>";
+    }).join("");
+  }
+
+  function spark(pts) {
+    if (!pts || pts.length < 3) return "";
+    var w = 84, h = 26, min = Math.min.apply(null, pts), max = Math.max.apply(null, pts), span = max - min || 1;
+    var p = pts.map(function (v, i) {
+      return (i / (pts.length - 1) * (w - 4) + 2).toFixed(1) + "," + (h - 3 - (v - min) / span * (h - 6)).toFixed(1);
+    }).join(" ");
+    return '<svg class="spark" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="Subscribers over the last 30 days"><polyline points="' + p + '"/></svg>';
+  }
+  function deltaCell(d, key, base) {
+    if (!d || d[key] == null) return '<span class="small">collecting</span>';
+    var v = d[key], cls = v > 0 ? "up" : v < 0 ? "down" : "";
+    var sign = v > 0 ? "+" : v < 0 ? "−" : "";
+    var pct = key === "subs" && base && base - v > 0 ? " (" + sign + Math.abs(v / (base - v) * 100).toFixed(1) + "%)" : "";
+    var span = d.days < 27 || d.days > 34 ? '<span class="small">in ' + d.days + " days</span>" : "";
+    return '<span class="delta ' + cls + '">' + sign + fmt(Math.abs(v)) + esc(pct) + "</span>" + span;
+  }
+  function renderChannels() {
+    var order = { own: 0, direct: 1, reference: 2 };
+    var chs = DATA.channels.slice().sort(function (a, b) {
+      return order[a.tier] - order[b.tier] || (b.subs || 0) - (a.subs || 0);
+    });
+    var rows = chs.map(function (c) {
+      var last = c.last_upload ? Math.floor((Date.now() - new Date(c.last_upload).getTime()) / 86400000) : null;
+      var lastTxt = last == null ? "-" : last === 0 ? "Today" : last + (last === 1 ? " day ago" : " days ago");
+      return '<tr class="' + (c.own ? "own" : "") + '">' +
+        '<td><div class="who"><img class="logo" src="' + esc(c.thumb) + '" alt="" loading="lazy"><div><div class="name">' + esc(c.name) +
+        '</div><span class="tag ' + c.tier + '">' + TIER_LABEL[c.tier] + "</span></div></div></td>" +
+        '<td class="num">' + (c.subs == null ? "hidden" : fmt(c.subs)) + "</td>" +
+        '<td class="num">' + deltaCell(c.d30, "subs", c.subs) + "</td>" +
+        '<td class="num">' + spark(c.spark) + "</td>" +
+        '<td class="num">' + deltaCell(c.d30, "views") + "</td>" +
+        '<td class="num">' + c.up30 + '<span class="small">' + c.up7 + " this week</span></td>" +
+        '<td class="num">' + esc(lastTxt) + "</td></tr>";
+    }).join("");
+    $("chTable").innerHTML = "<thead><tr><th>Channel</th><th class=\"num\">Subscribers</th><th class=\"num\">Subscribers gained</th><th class=\"num\">Trend</th><th class=\"num\">Views gained</th><th class=\"num\">Uploads, 30 days</th><th class=\"num\">Last upload</th></tr></thead><tbody>" + rows + "</tbody>";
+  }
+
+  function renderNotes() {
+    if (!NOTES || !NOTES.sections) return;
+    $("notesSec").hidden = false;
+    var days = NOTES.updated ? Math.floor((Date.now() - new Date(NOTES.updated + "T12:00:00+05:30").getTime()) / 86400000) : null;
+    var stale = days != null && days > 7;
+    $("notesIntro").innerHTML = esc(NOTES.intro || "") +
+      (days != null ? ' <span class="' + (stale ? "stale-note" : "") + '">Written ' + days + (days === 1 ? " day" : " days") + " ago.</span>" : "");
+    $("notes").innerHTML = NOTES.sections.map(function (s) {
+      return '<div class="note"><h3>' + esc(s.title) + "</h3><dl>" + (s.items || []).map(function (i) {
+        return '<div class="item"><dt>' + esc(i.heading) + (i.status ? '<span class="chip">' + esc(i.status) + "</span>" : "") +
+               "</dt><dd>" + esc(i.body) + "</dd></div>";
+      }).join("") + "</dl></div>";
+    }).join("");
+  }
+
+  function renderAlerts() {
+    var a = (DATA.alerts || []).slice(0, 15);
+    if (!a.length) { $("alertList").innerHTML = '<div class="empty">No alerts logged yet. The bot only logs new breakouts after its first run.</div>'; return; }
+    $("alertList").innerHTML = a.map(function (x) {
+      var when = x.time || x.ts || x.timestamp || x.sent_at;
+      var name = x.channel || x.channel_name || "";
+      var score = x.score != null ? Number(x.score) : null;
+      var link = x.url || (x.video_id ? url(x.video_id) : "#");
+      return '<div class="row plain">' +
+        '<div class="logo" aria-hidden="true"></div>' +
+        '<div><a class="title" href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(x.title || "Video") + "</a>" +
+        '<div class="meta"><span class="tag ' + esc(x.tier || "") + '">' + esc(name) + "</span>" +
+        (when ? "<span>" + esc(ago(when)) + "</span>" : "") + (x.views != null ? "<span>" + fmt(x.views) + " views</span>" : "") +
+        (x.notified ? "<span>Telegram sent ✓</span>" : "") + "</div></div>" +
+        '<div style="text-align:right">' + (score != null ? '<span class="chip hit">' + score.toFixed(1) + "×</span>" : "") + "</div></div>";
+    }).join("");
+  }
+
+  function renderAll() {
+    renderStatus(); renderHero(); renderBreakouts(); renderLatest(); renderChannels(); renderNotes(); renderAlerts();
+    $("foot").textContent = "Data comes from the YouTube Data API and refreshes about every hour. Scores need at least six comparable videos on a channel, so new or quiet channels may show no score.";
+  }
+
+  function showError(msg) {
+    $("headline").textContent = "The dashboard could not load its data";
+    $("subline").textContent = msg;
+    ["breakouts", "latest", "channels", "alertsSec"].forEach(function (id) { $(id).hidden = true; });
+  }
+
+  function load() {
+    var bust = "?t=" + Date.now();
+    return fetch("dashboard_data.json" + bust, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }).then(function (d) {
+      DATA = d;
+      return fetch("notes.json" + bust, { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    }).then(function (n) {
+      NOTES = n;
+      ["breakouts", "latest", "channels", "alertsSec"].forEach(function (id) { $(id).hidden = false; });
+      renderAll();
+    }).catch(function (e) {
+      if (DATA) return; // keep showing the last good data
+      showError(location.protocol === "file:"
+        ? "You opened this file from your computer. Open the GitHub Pages link instead."
+        : "dashboard_data.json is not there yet. Start the Outlier Watch workflow once from the Actions tab, then reload. (" + e.message + ")");
+    });
+  }
+
+  function wireSeg(id, key, num) {
+    $(id).addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      state[key] = num ? Number(b.dataset.v) : b.dataset.v;
+      Array.prototype.forEach.call($(id).children, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      if (DATA) { renderBreakouts(); renderLatest(); }
+    });
+  }
+  wireSeg("segTier", "tier", false);
+  wireSeg("segWin", "win", true);
+
+  load();
+  setInterval(load, 10 * 60 * 1000);
+  setInterval(function () { if (DATA) renderStatus(); }, 60 * 1000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) load(); });
+})();
+</script>
+</body>
+</html>

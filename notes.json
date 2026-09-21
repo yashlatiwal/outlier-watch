@@ -1,0 +1,46 @@
+{
+  "updated": "2026-09-18",
+  "intro": "Hand-written analysis carried over from the 18 Sep 2026 snapshot. The numbers above update by themselves. These notes do not, so check the date on each block. Ask Claude to refresh them from dashboard_data.json when you want a new read.",
+  "sections": [
+    {
+      "title": "What the last snapshot suggested",
+      "items": [
+        {
+          "heading": "Answer-key and attempt-survey videos",
+          "status": "Contested",
+          "body": "Apni Pariksha's answer-key videos ran at 356 to 490 views per hour, but that is about their normal pace during exam week, not a single-video breakout. Nirbhay, the channel closest to yours, already has a Steno answer-key analysis at 13.9 times his usual views (4,699 views). Open his video and check how much of the English section it covers before you decide to make one."
+        },
+        {
+          "heading": "Error-detection marathon",
+          "status": "Test first",
+          "body": "QEng's 350+ error-detection marathon scored about 25 times its usual. It is one video, so treat it as a lead. Try a shorter version of your own (for example 50 questions) before building a series around it."
+        },
+        {
+          "heading": "Phrasal verbs compilation",
+          "status": "Small sample",
+          "body": "Your '1 Hour = 250 Phrasal Verbs' video scored 24.5 times your usual, but on 916 views. It hints that compilation titles work for your audience. It does not prove it."
+        },
+        {
+          "heading": "Vacancy and salary-reveal stories",
+          "status": "Different lane",
+          "body": "Kashish wins with vacancy news that reveals the exact salary (352 views per hour). It works, but it is news, not teaching. Take it only if you want to compete on speed."
+        }
+      ]
+    },
+    {
+      "title": "Rules that still hold",
+      "items": [
+        {
+          "heading": "Title and thumbnail make the same promise",
+          "status": "Rule",
+          "body": "If the title says '250 phrasal verbs', the thumbnail shows 250 phrasal verbs. Do not split the promise across the two."
+        },
+        {
+          "heading": "Your 97.75 is a trust marker nobody else uses",
+          "status": "Open",
+          "body": "Honest, proof-first titles do well in this niche, and no tracked competitor leads with a scored result. Lean on it before you copy a generic curiosity template."
+        }
+      ]
+    }
+  ]
+}

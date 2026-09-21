@@ -1,0 +1,19 @@
+{
+  "_note": "One-time import so 30-day changes show from day one. Numbers come from the 18 Sep 2026 War Room snapshot: 18 Sep = values shown then, 19 Aug = those values minus the 30-day change shown then. Own-channel video count is left out because that change was not shown. Delete this file any time after the first run.",
+  "2026-08-19": {
+    "SSC English With Yash": {"subs": 2160, "views": 109600},
+    "Kashish Bhatt Academy": {"subs": 48900, "views": 4802075, "videos": 428},
+    "Apni Pariksha": {"subs": 50500, "views": 2787716, "videos": 167},
+    "Study Focus For Exams": {"subs": 20100, "views": 2301455, "videos": 486},
+    "Unfilterd Banda SSC": {"subs": 4750, "views": 621416, "videos": 233},
+    "QEng": {"subs": 119000, "views": 5191833, "videos": 193}
+  },
+  "2026-09-18": {
+    "SSC English With Yash": {"subs": 2200, "views": 121101, "videos": 45},
+    "Kashish Bhatt Academy": {"subs": 49400, "views": 5011458, "videos": 435},
+    "Apni Pariksha": {"subs": 51300, "views": 3358792, "videos": 198},
+    "Study Focus For Exams": {"subs": 20400, "views": 2521917, "videos": 503},
+    "Unfilterd Banda SSC": {"subs": 5930, "views": 872798, "videos": 252},
+    "QEng": {"subs": 133000, "views": 6500513, "videos": 201}
+  }
+}
