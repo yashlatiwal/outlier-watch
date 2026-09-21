@@ -165,3 +165,47 @@ def main():
 
         for video in recent:
             others_vph = [v["vph"] for v in recent if v["id"] != video["id"]]
+            baseline = median(others_vph) if others_vph else video["vph"]
+            score = video["vph"] / baseline if baseline > 0 else 1.0
+            video["score"] = round(score, 2)
+
+        for video in recent:
+            if video["score"] < OUTLIER_THRESHOLD:
+                continue
+            vid = video["id"]
+            prev_score = state.get(vid, {}).get("last_alerted_score", 0)
+            if prev_score and video["score"] < prev_score * 1.3:
+                continue
+
+            own_tag = "🟦 YOUR VIDEO" if ch.get("is_own") else ""
+            message = (
+                f"🚨 <b>Outlier detected</b> {own_tag}\n\n"
+                f"<b>{name}</b>\n"
+                f"{video['title']}\n\n"
+                f"Score: <b>{video['score']}×</b> channel average\n"
+                f"Views: {video['views']:,} · Age: {video['age_hours']:.1f}h\n"
+                f"https://www.youtube.com/watch?v={vid}"
+            )
+            send_telegram(message)
+            new_alerts += 1
+            state[vid] = {"last_alerted_score": video["score"], "channel": name, "title": video["title"]}
+
+            append_log(log, {
+                "alerted_at": run_time,
+                "channel": name,
+                "is_own": bool(ch.get("is_own")),
+                "video_id": vid,
+                "title": video["title"],
+                "score": video["score"],
+                "views": video["views"],
+                "video_age_hours": round(video["age_hours"], 1),
+                "url": f"https://www.youtube.com/watch?v={vid}",
+            })
+
+    save_json(STATE_FILE, state)
+    save_json(LOG_FILE, log)
+    print(f"Done. {new_alerts} alert(s) sent this run.")
+
+
+if __name__ == "__main__":
+    main()
