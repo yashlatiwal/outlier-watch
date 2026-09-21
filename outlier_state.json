@@ -20,6 +20,11 @@
       "score": 7.61,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "6mKmk29PbA4": {
+      "notified": true,
+      "score": 2.65,
+      "ts": "2026-09-21T16:53:39+00:00"
+    },
     "6mf2-ZNtiHg": {
       "notified": false,
       "score": 4.23,
@@ -240,6 +245,11 @@
       "score": 3.22,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "pFktxpIngRU": {
+      "notified": true,
+      "score": 3.13,
+      "ts": "2026-09-21T16:53:39+00:00"
+    },
     "r8H2s19JJnc": {
       "notified": false,
       "score": 4.4,
@@ -257,6 +267,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-09-21",
-  "last_publish_utc": "2026-09-21T11:23:43+00:00",
+  "last_publish_utc": "2026-09-21T16:53:39+00:00",
   "version": 2
 }
