@@ -90,6 +90,11 @@
       "score": 24.58,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "KysVtoBdZBA": {
+      "notified": false,
+      "score": 4.33,
+      "ts": "2026-09-22T08:44:03+00:00"
+    },
     "NHGrM-8atHE": {
       "notified": false,
       "score": 4.22,
@@ -252,8 +257,8 @@
     },
     "pFktxpIngRU": {
       "notified": true,
-      "score": 3.13,
-      "ts": "2026-09-21T16:53:39+00:00"
+      "score": 4.09,
+      "ts": "2026-09-22T08:44:03+00:00"
     },
     "r8H2s19JJnc": {
       "notified": false,
@@ -271,7 +276,7 @@
       "ts": "2026-09-21T11:23:43+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-09-21",
-  "last_publish_utc": "2026-09-22T03:18:48+00:00",
+  "last_heartbeat_ist_date": "2026-09-22",
+  "last_publish_utc": "2026-09-22T08:44:03+00:00",
   "version": 2
 }
