@@ -122,8 +122,8 @@
     },
     "T3xrINl05xg": {
       "notified": true,
-      "score": 4.54,
-      "ts": "2026-09-22T13:53:28+00:00"
+      "score": 6.14,
+      "ts": "2026-09-22T20:56:48+00:00"
     },
     "TJgOAusYUlo": {
       "notified": false,
@@ -292,6 +292,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-09-22",
-  "last_publish_utc": "2026-09-22T17:55:52+00:00",
+  "last_publish_utc": "2026-09-22T20:56:48+00:00",
   "version": 2
 }
