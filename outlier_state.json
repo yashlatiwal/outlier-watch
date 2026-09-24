@@ -200,6 +200,11 @@
       "score": 5.61,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "_vYLlDuixUE": {
+      "notified": false,
+      "score": 5.77,
+      "ts": "2026-09-24T19:47:37+00:00"
+    },
     "aK-xcwCVlxY": {
       "notified": false,
       "score": 4.15,
@@ -300,6 +305,11 @@
       "score": 3.04,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "nem8L3NrMxU": {
+      "notified": true,
+      "score": 2.85,
+      "ts": "2026-09-24T19:47:37+00:00"
+    },
     "o6tHLUv95bM": {
       "notified": false,
       "score": 2.5,
@@ -325,6 +335,11 @@
       "score": 2.68,
       "ts": "2026-09-24T11:06:46+00:00"
     },
+    "qp-wRw1oooE": {
+      "notified": true,
+      "score": 2.82,
+      "ts": "2026-09-24T19:47:37+00:00"
+    },
     "r8H2s19JJnc": {
       "notified": false,
       "score": 4.4,
@@ -342,6 +357,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-09-24",
-  "last_publish_utc": "2026-09-24T15:52:13+00:00",
+  "last_publish_utc": "2026-09-24T19:47:37+00:00",
   "version": 2
 }

@@ -890,5 +890,50 @@
     "published_at": "2026-09-24T09:12:51+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=pji_smVAG70"
+  },
+  {
+    "time": "2026-09-24T19:47:37+00:00",
+    "channel": "Apni Pariksha",
+    "channel_id": "UC-y-rBa2zPTPn5uDQ0AQ6uA",
+    "tier": "direct",
+    "video_id": "qp-wRw1oooE",
+    "title": "SSC Steno 2026 Skill करें या नहीं ? #sscsteno2026 #sscstenoskill",
+    "score": 2.82,
+    "views": 32220,
+    "vph": 2490.4,
+    "age_hours": 12.9,
+    "published_at": "2026-09-24T06:51:23+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=qp-wRw1oooE"
+  },
+  {
+    "time": "2026-09-24T19:47:37+00:00",
+    "channel": "Study Focus For Exams",
+    "channel_id": "UCExzMr_P0UpOHJ7oXARMCVw",
+    "tier": "direct",
+    "video_id": "nem8L3NrMxU",
+    "title": "SSC STENO 2026 | 30K+ DATA का Shift-Wise Analysis 🔥 Normalisation में कितने Marks बढ़ेंगे/घटेंगे?",
+    "score": 2.85,
+    "views": 12421,
+    "vph": 1206.9,
+    "age_hours": 10.3,
+    "published_at": "2026-09-24T09:30:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=nem8L3NrMxU"
+  },
+  {
+    "time": "2026-09-24T19:47:37+00:00",
+    "channel": "Gagan Pratap Maths",
+    "channel_id": "UCS2rhpz4RJEmb9CV7TPzBIg",
+    "tier": "reference",
+    "video_id": "_vYLlDuixUE",
+    "title": "SSC का नया कांड 🤭 CGL की Vacancy घटी 😡 Gagan Pratap Sir 😎 #ssc #ssccgl2026 #vacancy #gagan #shorts",
+    "score": 5.77,
+    "views": 222187,
+    "vph": 32250.6,
+    "age_hours": 6.9,
+    "published_at": "2026-09-24T12:54:16+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=_vYLlDuixUE"
   }
 ]
