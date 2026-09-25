@@ -965,5 +965,35 @@
     "published_at": "2026-09-24T18:12:07+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=30h3a9gjGnQ"
+  },
+  {
+    "time": "2026-09-25T17:25:03+00:00",
+    "channel": "Gagan Pratap Maths",
+    "channel_id": "UCS2rhpz4RJEmb9CV7TPzBIg",
+    "tier": "reference",
+    "video_id": "EBYNCG2Q30A",
+    "title": "Geometry Complete 🔥All Theorems & Examples | 51 Hours में पूरा Geometry | Gagan Pratap Sir #ssc",
+    "score": 4.02,
+    "views": 809922,
+    "vph": 6095.0,
+    "age_hours": 132.9,
+    "published_at": "2026-09-20T04:32:08+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=EBYNCG2Q30A"
+  },
+  {
+    "time": "2026-09-25T17:25:03+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "uwVeViaIDzs",
+    "title": "100 Important Synonyms for all exams | 39  / 100 | English With Rani ma'am",
+    "score": 11.53,
+    "views": 15305,
+    "vph": 1950.4,
+    "age_hours": 7.8,
+    "published_at": "2026-09-25T09:34:14+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=uwVeViaIDzs"
   }
 ]
