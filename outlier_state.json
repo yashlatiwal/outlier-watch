@@ -175,6 +175,11 @@
       "score": 4.58,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "VstAM_r7U5g": {
+      "notified": false,
+      "score": 5.16,
+      "ts": "2026-09-27T18:02:35+00:00"
+    },
     "W2AfPsGS_OY": {
       "notified": true,
       "score": 2.65,
@@ -387,6 +392,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-09-27",
-  "last_publish_utc": "2026-09-27T13:31:34+00:00",
+  "last_publish_utc": "2026-09-27T18:02:35+00:00",
   "version": 2
 }
