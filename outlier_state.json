@@ -177,8 +177,8 @@
     },
     "VstAM_r7U5g": {
       "notified": false,
-      "score": 5.16,
-      "ts": "2026-09-27T18:02:35+00:00"
+      "score": 6.78,
+      "ts": "2026-09-28T12:54:33+00:00"
     },
     "W2AfPsGS_OY": {
       "notified": true,
@@ -287,8 +287,8 @@
     },
     "kBkDXpjlX0Q": {
       "notified": true,
-      "score": 2.27,
-      "ts": "2026-09-28T05:42:05+00:00"
+      "score": 4.69,
+      "ts": "2026-09-28T12:54:33+00:00"
     },
     "keP09tM49kk": {
       "notified": false,
@@ -397,6 +397,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-09-28",
-  "last_publish_utc": "2026-09-28T05:42:05+00:00",
+  "last_publish_utc": "2026-09-28T12:54:33+00:00",
   "version": 2
 }

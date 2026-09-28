@@ -1085,5 +1085,35 @@
     "published_at": "2026-09-27T12:30:01+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=kBkDXpjlX0Q"
+  },
+  {
+    "time": "2026-09-28T12:54:33+00:00",
+    "channel": "SSC English With Yash",
+    "channel_id": "UCsXgdKeU6ztmqaT3Sj6DbFA",
+    "tier": "own",
+    "video_id": "kBkDXpjlX0Q",
+    "title": "SSC Steno 2026 | 8th Pay Commission |  Real Impact on SSC Steno Salary",
+    "score": 4.69,
+    "views": 3771,
+    "vph": 154.5,
+    "age_hours": 24.4,
+    "published_at": "2026-09-27T12:30:01+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=kBkDXpjlX0Q"
+  },
+  {
+    "time": "2026-09-28T12:54:33+00:00",
+    "channel": "Aman sir English",
+    "channel_id": "UCD_u3AOsgY6fFy61PEKoo4A",
+    "tier": "reference",
+    "video_id": "VstAM_r7U5g",
+    "title": "Important message|aman sir english|cgl pre|ssc cgl practice|ssc new pattern|best teacher of english|",
+    "score": 6.78,
+    "views": 470869,
+    "vph": 16776.5,
+    "age_hours": 28.1,
+    "published_at": "2026-09-27T08:50:32+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=VstAM_r7U5g"
   }
 ]
