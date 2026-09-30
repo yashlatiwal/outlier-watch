@@ -1,0 +1,21 @@
+{
+  "_help": "Settings for the SSC news watcher (ssc_watch.py). It reads Google News headlines for SSC Steno and sends you a Telegram message the first time a big event is reported as released (answer key, result, cutoff, skill test, admit card, exam date or notice). queries = what to search. must_include = a headline must contain one of these. ignore = skip headlines with these words (LDCE is a different exam). events = the event names and the words that identify them. released_words = the headline must say it is out. not_yet_words = headlines like 'releasing soon' are skipped. max_age_hours = ignore stories older than this. cooldown_hours = after alerting on an event, stay quiet about the same event for this long.",
+  "queries": [
+    "SSC Stenographer (answer key OR result OR cutoff OR \"skill test\" OR \"admit card\" OR notice) when:2d",
+    "SSC Steno 2026 (out OR released OR declared) when:2d"
+  ],
+  "must_include": ["steno"],
+  "ignore": ["ldce", "limited departmental", "departmental competitive"],
+  "events": {
+    "Answer key": ["answer key", "ans key", "response sheet", "आंसर की", "आन्सर की"],
+    "Result": ["result", "scorecard", "score card", "रिजल्ट", "परिणाम"],
+    "Cutoff": ["cut off", "cutoff", "कटऑफ"],
+    "Skill test": ["skill test", "typing test", "स्किल टेस्ट"],
+    "Admit card": ["admit card", "city slip", "hall ticket", "एडमिट कार्ड"],
+    "Exam date or notice": ["exam date", "revised date", "notice", "schedule", "notification"]
+  },
+  "released_words": ["out", "released", "release", "declared", "announced", "uploaded", "activated", "live", "available", "issued", "published", "जारी", "घोषित"],
+  "not_yet_words": ["soon", "expected", "likely", "when", "how to", "kab", "prediction", "steps to", "guide", "कब", "संभावित"],
+  "max_age_hours": 6,
+  "cooldown_hours": 36
+}
