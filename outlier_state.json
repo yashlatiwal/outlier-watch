@@ -77,8 +77,8 @@
     },
     "EBYNCG2Q30A": {
       "notified": false,
-      "score": 4.02,
-      "ts": "2026-09-25T17:25:03+00:00"
+      "score": 5.27,
+      "ts": "2026-09-30T07:57:51+00:00"
     },
     "ERb9Wfi2Nc0": {
       "notified": false,
@@ -411,7 +411,7 @@
       "ts": "2026-09-21T11:23:43+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-09-29",
-  "last_publish_utc": "2026-09-30T01:49:24+00:00",
+  "last_heartbeat_ist_date": "2026-09-30",
+  "last_publish_utc": "2026-09-30T07:57:51+00:00",
   "version": 2
 }
