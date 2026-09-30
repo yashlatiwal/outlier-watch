@@ -1,0 +1,44 @@
+name: SSC News Watch
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ssc-watch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check SSC news
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python ssc_watch.py
+
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "ssc-watch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -e ssc_state.json ]; then git add ssc_state.json; fi
+          if git diff --cached --quiet; then
+            echo "No state changes to save"
+            exit 0
+          fi
+          git commit -m "data: ssc watch state $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase
+          git push
