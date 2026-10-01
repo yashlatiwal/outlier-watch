@@ -1205,5 +1205,35 @@
     "published_at": "2026-09-30T07:05:34+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=VRyVR1JRYzA"
+  },
+  {
+    "time": "2026-10-01T16:37:06+00:00",
+    "channel": "Kashish Bhatt Academy",
+    "channel_id": "UCK6J3DCc64Rvvmtus-kKR6w",
+    "tier": "direct",
+    "video_id": "snH9IEA5aDc",
+    "title": "New Court Steno Vacancy 2026 😍| Salary: 98,000 💸| NO EXAM❌️ | Steno New Vacancy 2026",
+    "score": 3.76,
+    "views": 27188,
+    "vph": 333.4,
+    "age_hours": 81.6,
+    "published_at": "2026-09-28T07:03:51+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=snH9IEA5aDc"
+  },
+  {
+    "time": "2026-10-01T16:37:06+00:00",
+    "channel": "Nimisha Bansal",
+    "channel_id": "UCnRI8GekLC4QPbbJfcuxwlQ",
+    "tier": "reference",
+    "video_id": "FfjAO4Zn_Ks",
+    "title": "From inspiring students to inspiring at IIT Delhi 🎓A truly special moment ❤️ | Nimisha Bansal",
+    "score": 4.74,
+    "views": 86867,
+    "vph": 21773.6,
+    "age_hours": 4.0,
+    "published_at": "2026-10-01T12:37:44+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=FfjAO4Zn_Ks"
   }
 ]
