@@ -1445,5 +1445,35 @@
     "published_at": "2026-10-03T12:44:59+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=E2HUZxDSyfo"
+  },
+  {
+    "time": "2026-10-05T22:49:45+00:00",
+    "channel": "Kashish Bhatt Academy",
+    "channel_id": "UCK6J3DCc64Rvvmtus-kKR6w",
+    "tier": "direct",
+    "video_id": "SjHmCQOAOAE",
+    "title": "DSSSB Steno New Vacancy 2026 😍| Salary: 96,000 💸|Senior Private Secretary and Private Secretary Post",
+    "score": 2.53,
+    "views": 22385,
+    "vph": 198.7,
+    "age_hours": 112.7,
+    "published_at": "2026-10-01T06:08:59+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=SjHmCQOAOAE"
+  },
+  {
+    "time": "2026-10-05T22:49:45+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "E2HUZxDSyfo",
+    "title": "SSC CGL 2026 में पूछे जा रहे NEW PATTERN Spotting Errors | English With Rani Ma'am",
+    "score": 8.95,
+    "views": 180552,
+    "vph": 54091.0,
+    "age_hours": 3.3,
+    "published_at": "2026-10-05T19:29:29+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=E2HUZxDSyfo"
   }
 ]

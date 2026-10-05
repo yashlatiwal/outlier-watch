@@ -86,9 +86,9 @@
       "ts": "2026-09-23T18:30:44+00:00"
     },
     "E2HUZxDSyfo": {
-      "notified": false,
-      "score": 4.62,
-      "ts": "2026-10-05T16:17:35+00:00"
+      "notified": true,
+      "score": 8.95,
+      "ts": "2026-10-05T22:49:45+00:00"
     },
     "EBYNCG2Q30A": {
       "notified": false,
@@ -174,6 +174,11 @@
       "notified": false,
       "score": 4.09,
       "ts": "2026-09-21T11:23:43+00:00"
+    },
+    "SjHmCQOAOAE": {
+      "notified": true,
+      "score": 2.53,
+      "ts": "2026-10-05T22:49:45+00:00"
     },
     "T3xrINl05xg": {
       "notified": true,
@@ -477,6 +482,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-05",
-  "last_publish_utc": "2026-10-05T16:17:35+00:00",
+  "last_publish_utc": "2026-10-05T22:49:45+00:00",
   "version": 2
 }
