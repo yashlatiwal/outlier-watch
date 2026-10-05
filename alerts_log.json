@@ -1415,5 +1415,35 @@
     "published_at": "2026-10-03T14:30:10+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=dhxiDRT8auE"
+  },
+  {
+    "time": "2026-10-05T16:17:35+00:00",
+    "channel": "Apni Pariksha",
+    "channel_id": "UC-y-rBa2zPTPn5uDQ0AQ6uA",
+    "tier": "direct",
+    "video_id": "lsAtP5eqwlY",
+    "title": "Steno Vacancy 2026 | AHC Steno Vacancy 2026 | UP Steno Vacancies #shorts #steno #ahcsteno",
+    "score": 2.67,
+    "views": 32409,
+    "vph": 95.0,
+    "age_hours": 341.0,
+    "published_at": "2026-09-21T11:15:38+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=lsAtP5eqwlY"
+  },
+  {
+    "time": "2026-10-05T16:17:35+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "E2HUZxDSyfo",
+    "title": "SSC CGL 2026 में पूछे जा रहे NEW PATTERN Spotting Errors | English With Rani Ma'am",
+    "score": 4.62,
+    "views": 141417,
+    "vph": 2743.7,
+    "age_hours": 51.5,
+    "published_at": "2026-10-03T12:44:59+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=E2HUZxDSyfo"
   }
 ]
