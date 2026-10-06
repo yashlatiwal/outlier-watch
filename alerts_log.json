@@ -1595,5 +1595,35 @@
     "published_at": "2026-09-30T14:54:53+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=M7SpsV-bACc"
+  },
+  {
+    "time": "2026-10-06T21:10:23+00:00",
+    "channel": "QEng",
+    "channel_id": "UCI8eKDQTQLJFuhg48Kpo2KQ",
+    "tier": "reference",
+    "video_id": "dhxiDRT8auE",
+    "title": "200 Most Important Synonyms & Antonyms (SSC PYQ) | Quick Vocab Revision - 05 | SSC CGL 2026  | QEng",
+    "score": 4.01,
+    "views": 78899,
+    "vph": 1002.9,
+    "age_hours": 78.7,
+    "published_at": "2026-10-03T14:30:10+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=dhxiDRT8auE"
+  },
+  {
+    "time": "2026-10-06T21:10:23+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "l4v68jsBo9E",
+    "title": "SSC STENO 2026🔥| VOICE | ALL 2025 Questions | MUST WATCH FOR STENOS | ‪@nirbhayenglish‬ |",
+    "score": 7.79,
+    "views": 5190,
+    "vph": 7.1,
+    "age_hours": 726.4,
+    "published_at": "2026-09-06T14:46:01+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=l4v68jsBo9E"
   }
 ]
