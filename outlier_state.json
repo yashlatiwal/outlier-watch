@@ -236,9 +236,9 @@
       "ts": "2026-09-21T20:46:51+00:00"
     },
     "Wi6IxygCqYY": {
-      "notified": false,
-      "score": 9.4,
-      "ts": "2026-09-21T11:23:43+00:00"
+      "notified": true,
+      "score": 12.35,
+      "ts": "2026-10-06T02:40:58+00:00"
     },
     "Wt8C0vg0Vc8": {
       "notified": true,
@@ -482,6 +482,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-05",
-  "last_publish_utc": "2026-10-05T22:49:45+00:00",
+  "last_publish_utc": "2026-10-06T02:40:58+00:00",
   "version": 2
 }
