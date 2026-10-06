@@ -80,6 +80,11 @@
       "score": 5.32,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "BV7Oo5ezaxo": {
+      "notified": true,
+      "score": 5.77,
+      "ts": "2026-10-06T09:46:11+00:00"
+    },
     "Cj66HgSHQCk": {
       "notified": true,
       "score": 30.66,
@@ -481,7 +486,7 @@
       "ts": "2026-10-04T19:10:11+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-05",
-  "last_publish_utc": "2026-10-06T02:40:58+00:00",
+  "last_heartbeat_ist_date": "2026-10-06",
+  "last_publish_utc": "2026-10-06T09:46:11+00:00",
   "version": 2
 }
