@@ -71,9 +71,9 @@
       "ts": "2026-09-21T11:23:43+00:00"
     },
     "B7WtdF8PoMQ": {
-      "notified": false,
-      "score": 3.41,
-      "ts": "2026-09-21T11:23:43+00:00"
+      "notified": true,
+      "score": 4.76,
+      "ts": "2026-10-06T16:29:26+00:00"
     },
     "BIf8sQf7p30": {
       "notified": false,
@@ -150,6 +150,11 @@
       "score": 4.33,
       "ts": "2026-09-22T08:44:03+00:00"
     },
+    "M7SpsV-bACc": {
+      "notified": false,
+      "score": 4.01,
+      "ts": "2026-10-06T16:29:26+00:00"
+    },
     "MjiMbNGfK4E": {
       "notified": false,
       "score": 4.84,
@@ -171,9 +176,9 @@
       "ts": "2026-09-24T00:42:24+00:00"
     },
     "Qp7AjdoT-t4": {
-      "notified": false,
-      "score": 2.98,
-      "ts": "2026-09-21T11:23:43+00:00"
+      "notified": true,
+      "score": 4.03,
+      "ts": "2026-10-06T16:29:26+00:00"
     },
     "SEO8Gma5WNc": {
       "notified": false,
@@ -361,9 +366,9 @@
       "ts": "2026-10-02T19:26:27+00:00"
     },
     "keP09tM49kk": {
-      "notified": false,
-      "score": 4.53,
-      "ts": "2026-09-21T11:23:43+00:00"
+      "notified": true,
+      "score": 6.31,
+      "ts": "2026-10-06T16:29:26+00:00"
     },
     "l4v68jsBo9E": {
       "notified": false,
@@ -386,9 +391,9 @@
       "ts": "2026-09-21T11:23:43+00:00"
     },
     "lp1IIDppBgs": {
-      "notified": false,
-      "score": 2.75,
-      "ts": "2026-09-21T11:23:43+00:00"
+      "notified": true,
+      "score": 3.68,
+      "ts": "2026-10-06T16:29:26+00:00"
     },
     "lsAtP5eqwlY": {
       "notified": true,
@@ -434,6 +439,11 @@
       "notified": true,
       "score": 2.52,
       "ts": "2026-09-25T06:23:07+00:00"
+    },
+    "oS1Ax-7Sz8I": {
+      "notified": true,
+      "score": 2.5,
+      "ts": "2026-10-06T16:29:26+00:00"
     },
     "pFktxpIngRU": {
       "notified": true,
@@ -487,6 +497,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-06",
-  "last_publish_utc": "2026-10-06T09:46:11+00:00",
+  "last_publish_utc": "2026-10-06T16:29:26+00:00",
   "version": 2
 }
