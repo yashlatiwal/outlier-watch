@@ -1655,5 +1655,35 @@
     "published_at": "2026-09-23T15:46:40+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=ePPf8e2z3OU"
+  },
+  {
+    "time": "2026-10-07T14:11:57+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "eZCa7UhBrFY",
+    "title": "PRACTICE SET - 02 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 3.56,
+    "views": 853,
+    "vph": 33.9,
+    "age_hours": 25.2,
+    "published_at": "2026-10-06T13:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=eZCa7UhBrFY"
+  },
+  {
+    "time": "2026-10-07T14:11:57+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "yhYyVcf2-9I",
+    "title": "क्‍या नहीं पढ़ना है | STET | STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 40.16,
+    "views": 14035,
+    "vph": 171.8,
+    "age_hours": 81.7,
+    "published_at": "2026-10-04T04:30:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=yhYyVcf2-9I"
   }
 ]
