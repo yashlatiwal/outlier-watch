@@ -1685,5 +1685,50 @@
     "published_at": "2026-10-04T04:30:07+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=yhYyVcf2-9I"
+  },
+  {
+    "time": "2026-10-07T20:03:32+00:00",
+    "channel": "Gagan Pratap Maths",
+    "channel_id": "UCS2rhpz4RJEmb9CV7TPzBIg",
+    "tier": "reference",
+    "video_id": "JWDXOclKpgs",
+    "title": "ये वाला Trend तो बनता है 😎🔥 Gagan Sir & Abha Ma'am 🥰 #trendingsong #trend #chalrechalrewaal #viral",
+    "score": 4.35,
+    "views": 651643,
+    "vph": 48214.4,
+    "age_hours": 13.5,
+    "published_at": "2026-10-07T06:32:37+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=JWDXOclKpgs"
+  },
+  {
+    "time": "2026-10-07T20:03:32+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "yhYyVcf2-9I",
+    "title": "क्‍या नहीं पढ़ना है | STET | STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 54.65,
+    "views": 20397,
+    "vph": 233.0,
+    "age_hours": 87.6,
+    "published_at": "2026-10-04T04:30:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=yhYyVcf2-9I"
+  },
+  {
+    "time": "2026-10-07T20:03:32+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "E2HUZxDSyfo",
+    "title": "SSC CGL 2026 में पूछे जा रहे NEW PATTERN Spotting Errors | English With Rani Ma'am",
+    "score": 11.91,
+    "views": 328892,
+    "vph": 6771.8,
+    "age_hours": 48.6,
+    "published_at": "2026-10-05T19:29:29+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=E2HUZxDSyfo"
   }
 ]
