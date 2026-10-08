@@ -1850,5 +1850,35 @@
     "published_at": "2026-10-08T08:38:56+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=1lTMye0Y_UM"
+  },
+  {
+    "time": "2026-10-08T19:39:30+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "eZCa7UhBrFY",
+    "title": "PRACTICE SET - 02 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 4.83,
+    "views": 2049,
+    "vph": 37.5,
+    "age_hours": 54.7,
+    "published_at": "2026-10-06T13:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=eZCa7UhBrFY"
+  },
+  {
+    "time": "2026-10-08T19:39:30+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "BV7Oo5ezaxo",
+    "title": "PRACTICE SET - 01 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 7.69,
+    "views": 3426,
+    "vph": 44.7,
+    "age_hours": 76.7,
+    "published_at": "2026-10-05T15:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=BV7Oo5ezaxo"
   }
 ]
