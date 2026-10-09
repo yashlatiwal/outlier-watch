@@ -1940,5 +1940,50 @@
     "published_at": "2026-09-28T15:01:06+00:00",
     "notified": false,
     "url": "https://www.youtube.com/watch?v=ebGnEqRmu0M"
+  },
+  {
+    "time": "2026-10-09T13:38:38+00:00",
+    "channel": "Apni Pariksha",
+    "channel_id": "UC-y-rBa2zPTPn5uDQ0AQ6uA",
+    "tier": "direct",
+    "video_id": "lsAtP5eqwlY",
+    "title": "Steno Vacancy 2026 | AHC Steno Vacancy 2026 | UP Steno Vacancies #shorts #steno #ahcsteno",
+    "score": 3.57,
+    "views": 33286,
+    "vph": 76.6,
+    "age_hours": 434.4,
+    "published_at": "2026-09-21T11:15:38+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=lsAtP5eqwlY"
+  },
+  {
+    "time": "2026-10-09T13:38:38+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "G6NBrZjrOpo",
+    "title": "PRACTICE SET - 04 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 5.15,
+    "views": 2166,
+    "vph": 87.9,
+    "age_hours": 24.6,
+    "published_at": "2026-10-08T13:00:06+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=G6NBrZjrOpo"
+  },
+  {
+    "time": "2026-10-09T13:38:38+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "BV7Oo5ezaxo",
+    "title": "PRACTICE SET - 01 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 10.96,
+    "views": 5277,
+    "vph": 55.8,
+    "age_hours": 94.6,
+    "published_at": "2026-10-05T15:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=BV7Oo5ezaxo"
   }
 ]
