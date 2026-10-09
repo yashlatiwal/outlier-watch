@@ -1895,5 +1895,50 @@
     "published_at": "2026-10-08T13:00:06+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=G6NBrZjrOpo"
+  },
+  {
+    "time": "2026-10-09T06:28:17+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "G6NBrZjrOpo",
+    "title": "PRACTICE SET - 04 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 3.79,
+    "views": 1353,
+    "vph": 77.4,
+    "age_hours": 17.5,
+    "published_at": "2026-10-08T13:00:06+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=G6NBrZjrOpo"
+  },
+  {
+    "time": "2026-10-09T06:28:17+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "yhYyVcf2-9I",
+    "title": "क्‍या नहीं पढ़ना है | STET | STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 151.8,
+    "views": 71087,
+    "vph": 582.8,
+    "age_hours": 122.0,
+    "published_at": "2026-10-04T04:30:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=yhYyVcf2-9I"
+  },
+  {
+    "time": "2026-10-09T06:28:17+00:00",
+    "channel": "Aman sir English",
+    "channel_id": "UCD_u3AOsgY6fFy61PEKoo4A",
+    "tier": "reference",
+    "video_id": "ebGnEqRmu0M",
+    "title": "voice ssc cgl|active passive ssc|ssc cgl practice|english for ssc exams|best teacher of english|ssc",
+    "score": 5.27,
+    "views": 284833,
+    "vph": 1115.0,
+    "age_hours": 255.5,
+    "published_at": "2026-09-28T15:01:06+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=ebGnEqRmu0M"
   }
 ]

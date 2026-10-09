@@ -142,8 +142,8 @@
     },
     "G6NBrZjrOpo": {
       "notified": true,
-      "score": 2.5,
-      "ts": "2026-10-09T00:08:06+00:00"
+      "score": 3.79,
+      "ts": "2026-10-09T06:28:17+00:00"
     },
     "GCroaP-zuRg": {
       "notified": false,
@@ -347,8 +347,8 @@
     },
     "ebGnEqRmu0M": {
       "notified": false,
-      "score": 4.05,
-      "ts": "2026-10-03T13:36:04+00:00"
+      "score": 5.27,
+      "ts": "2026-10-09T06:28:17+00:00"
     },
     "f3wWShbuGIg": {
       "notified": false,
@@ -527,11 +527,11 @@
     },
     "yhYyVcf2-9I": {
       "notified": true,
-      "score": 110.96,
-      "ts": "2026-10-08T13:52:47+00:00"
+      "score": 151.8,
+      "ts": "2026-10-09T06:28:17+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-08",
-  "last_publish_utc": "2026-10-09T00:08:06+00:00",
+  "last_heartbeat_ist_date": "2026-10-09",
+  "last_publish_utc": "2026-10-09T06:28:17+00:00",
   "version": 2
 }
