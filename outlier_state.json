@@ -40,6 +40,11 @@
       "score": 7.61,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "4W8bz35pLsE": {
+      "notified": false,
+      "score": 5.64,
+      "ts": "2026-10-09T19:15:02+00:00"
+    },
     "6mKmk29PbA4": {
       "notified": true,
       "score": 2.65,
@@ -72,8 +77,8 @@
     },
     "9Sez-nEOY-0": {
       "notified": true,
-      "score": 7.6,
-      "ts": "2026-10-08T13:52:47+00:00"
+      "score": 10.92,
+      "ts": "2026-10-09T19:15:02+00:00"
     },
     "AGoOS4nq3Z8": {
       "notified": false,
@@ -342,8 +347,8 @@
     },
     "eZCa7UhBrFY": {
       "notified": true,
-      "score": 4.83,
-      "ts": "2026-10-08T19:39:30+00:00"
+      "score": 6.92,
+      "ts": "2026-10-09T19:15:02+00:00"
     },
     "ebGnEqRmu0M": {
       "notified": false,
@@ -532,6 +537,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-09",
-  "last_publish_utc": "2026-10-09T13:38:38+00:00",
+  "last_publish_utc": "2026-10-09T19:15:02+00:00",
   "version": 2
 }

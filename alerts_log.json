@@ -1985,5 +1985,50 @@
     "published_at": "2026-10-05T15:00:09+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=BV7Oo5ezaxo"
+  },
+  {
+    "time": "2026-10-09T19:15:02+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "9Sez-nEOY-0",
+    "title": "NOUN | LEVEL 1 | STET | PRACTICE QUESTIONS | LEARN ENGLISH WITH NIRBHAY | @nirbhayenglish |",
+    "score": 10.92,
+    "views": 5003,
+    "vph": 95.8,
+    "age_hours": 52.2,
+    "published_at": "2026-10-07T15:00:06+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=9Sez-nEOY-0"
+  },
+  {
+    "time": "2026-10-09T19:15:02+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "eZCa7UhBrFY",
+    "title": "PRACTICE SET - 02 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 6.92,
+    "views": 3300,
+    "vph": 42.2,
+    "age_hours": 78.2,
+    "published_at": "2026-10-06T13:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=eZCa7UhBrFY"
+  },
+  {
+    "time": "2026-10-09T19:15:02+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "4W8bz35pLsE",
+    "title": "Homonyms Asked in Recent Exams | Vocab  | English With Rani Ma'am",
+    "score": 5.64,
+    "views": 65555,
+    "vph": 6928.8,
+    "age_hours": 9.5,
+    "published_at": "2026-10-09T09:47:22+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=4W8bz35pLsE"
   }
 ]
