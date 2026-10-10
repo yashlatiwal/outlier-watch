@@ -97,8 +97,8 @@
     },
     "BV7Oo5ezaxo": {
       "notified": true,
-      "score": 10.96,
-      "ts": "2026-10-09T13:38:38+00:00"
+      "score": 15.72,
+      "ts": "2026-10-10T15:30:21+00:00"
     },
     "Cj66HgSHQCk": {
       "notified": true,
@@ -392,8 +392,8 @@
     },
     "kBkDXpjlX0Q": {
       "notified": true,
-      "score": 6.46,
-      "ts": "2026-09-29T18:27:10+00:00"
+      "score": 9.56,
+      "ts": "2026-10-10T15:30:21+00:00"
     },
     "kNRNr_7BvvU": {
       "notified": true,
@@ -537,11 +537,11 @@
     },
     "yhYyVcf2-9I": {
       "notified": true,
-      "score": 151.8,
-      "ts": "2026-10-09T06:28:17+00:00"
+      "score": 198.07,
+      "ts": "2026-10-10T15:30:21+00:00"
     }
   },
   "last_heartbeat_ist_date": "2026-10-10",
-  "last_publish_utc": "2026-10-10T09:23:38+00:00",
+  "last_publish_utc": "2026-10-10T15:30:21+00:00",
   "version": 2
 }

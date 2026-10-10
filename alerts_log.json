@@ -2060,5 +2060,50 @@
     "published_at": "2026-10-09T13:00:10+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=LLZJvp816vI"
+  },
+  {
+    "time": "2026-10-10T15:30:21+00:00",
+    "channel": "SSC English With Yash",
+    "channel_id": "UCsXgdKeU6ztmqaT3Sj6DbFA",
+    "tier": "own",
+    "video_id": "kBkDXpjlX0Q",
+    "title": "SSC Steno 2026 | 8th Pay Commission |  Real Impact on SSC Steno Salary",
+    "score": 9.56,
+    "views": 7026,
+    "vph": 22.3,
+    "age_hours": 315.0,
+    "published_at": "2026-09-27T12:30:01+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=kBkDXpjlX0Q"
+  },
+  {
+    "time": "2026-10-10T15:30:21+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "BV7Oo5ezaxo",
+    "title": "PRACTICE SET - 01 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 15.72,
+    "views": 8528,
+    "vph": 70.8,
+    "age_hours": 120.5,
+    "published_at": "2026-10-05T15:00:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=BV7Oo5ezaxo"
+  },
+  {
+    "time": "2026-10-10T15:30:21+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "yhYyVcf2-9I",
+    "title": "क्‍या नहीं पढ़ना है | STET | STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 198.07,
+    "views": 110171,
+    "vph": 710.8,
+    "age_hours": 155.0,
+    "published_at": "2026-10-04T04:30:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=yhYyVcf2-9I"
   }
 ]
