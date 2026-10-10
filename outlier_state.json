@@ -177,8 +177,8 @@
     },
     "LLZJvp816vI": {
       "notified": true,
-      "score": 2.62,
-      "ts": "2026-10-10T02:32:52+00:00"
+      "score": 4.5,
+      "ts": "2026-10-10T09:23:38+00:00"
     },
     "M7SpsV-bACc": {
       "notified": false,
@@ -541,7 +541,7 @@
       "ts": "2026-10-09T06:28:17+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-09",
-  "last_publish_utc": "2026-10-10T02:32:52+00:00",
+  "last_heartbeat_ist_date": "2026-10-10",
+  "last_publish_utc": "2026-10-10T09:23:38+00:00",
   "version": 2
 }
