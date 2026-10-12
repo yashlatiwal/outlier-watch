@@ -2330,5 +2330,50 @@
     "published_at": "2026-10-06T13:00:09+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=eZCa7UhBrFY"
+  },
+  {
+    "time": "2026-10-12T19:55:27+00:00",
+    "channel": "Kashish Bhatt Academy",
+    "channel_id": "UCK6J3DCc64Rvvmtus-kKR6w",
+    "tier": "direct",
+    "video_id": "SjHmCQOAOAE",
+    "title": "DSSSB Steno New Vacancy 2026 😍| Salary: 96,000 💸|Senior Private Secretary and Private Secretary Post",
+    "score": 3.59,
+    "views": 31460,
+    "vph": 113.3,
+    "age_hours": 277.8,
+    "published_at": "2026-10-01T06:08:59+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=SjHmCQOAOAE"
+  },
+  {
+    "time": "2026-10-12T19:55:27+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "eDe4hv75Zos",
+    "title": "कैसे तैयार करें अंग्रेजी ? | STET | ENGLISH STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 19.37,
+    "views": 12145,
+    "vph": 345.3,
+    "age_hours": 35.2,
+    "published_at": "2026-10-11T08:45:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=eDe4hv75Zos"
+  },
+  {
+    "time": "2026-10-12T19:55:27+00:00",
+    "channel": "English With Rani Mam",
+    "channel_id": "UCvagVtkTsj3ASMTlhcIc-7A",
+    "tier": "reference",
+    "video_id": "_PP3PioYuX4",
+    "title": "Recent Exams के Cloze Tests और Fill in the Blanks में पूछे गए कुछ Important Phrases | By Rani Ma'am",
+    "score": 4.97,
+    "views": 57453,
+    "vph": 4593.4,
+    "age_hours": 12.5,
+    "published_at": "2026-10-12T07:25:00+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=_PP3PioYuX4"
   }
 ]
