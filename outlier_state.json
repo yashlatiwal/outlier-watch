@@ -82,8 +82,8 @@
     },
     "9Sez-nEOY-0": {
       "notified": true,
-      "score": 10.92,
-      "ts": "2026-10-09T19:15:02+00:00"
+      "score": 14.36,
+      "ts": "2026-10-12T10:13:01+00:00"
     },
     "AGoOS4nq3Z8": {
       "notified": false,
@@ -377,8 +377,8 @@
     },
     "eZCa7UhBrFY": {
       "notified": true,
-      "score": 6.92,
-      "ts": "2026-10-09T19:15:02+00:00"
+      "score": 9.33,
+      "ts": "2026-10-12T10:13:01+00:00"
     },
     "ebGnEqRmu0M": {
       "notified": false,
@@ -437,8 +437,8 @@
     },
     "kre5vDOOX8k": {
       "notified": true,
-      "score": 3.99,
-      "ts": "2026-10-08T13:52:47+00:00"
+      "score": 5.31,
+      "ts": "2026-10-12T10:13:01+00:00"
     },
     "l4v68jsBo9E": {
       "notified": true,
@@ -557,8 +557,8 @@
     },
     "w8NzA24Jd3o": {
       "notified": true,
-      "score": 9.15,
-      "ts": "2026-10-11T19:54:25+00:00"
+      "score": 13.88,
+      "ts": "2026-10-12T10:13:01+00:00"
     },
     "wHYcBxsByKg": {
       "notified": false,
@@ -576,7 +576,7 @@
       "ts": "2026-10-10T15:30:21+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-11",
-  "last_publish_utc": "2026-10-12T02:35:02+00:00",
+  "last_heartbeat_ist_date": "2026-10-12",
+  "last_publish_utc": "2026-10-12T10:13:01+00:00",
   "version": 2
 }
