@@ -2390,5 +2390,35 @@
     "published_at": "2026-10-12T13:00:06+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=zh_1kBwFek4"
+  },
+  {
+    "time": "2026-10-13T16:45:02+00:00",
+    "channel": "Gagan Pratap Maths",
+    "channel_id": "UCS2rhpz4RJEmb9CV7TPzBIg",
+    "tier": "reference",
+    "video_id": "uaBITnxPLUM",
+    "title": "Bihar Police in SelectionWay Bihar Meetup 🔥 Gagan Pratap Sir #bihar #meetup #patna",
+    "score": 4.12,
+    "views": 1072549,
+    "vph": 28592.9,
+    "age_hours": 37.5,
+    "published_at": "2026-10-12T03:14:23+00:00",
+    "notified": false,
+    "url": "https://www.youtube.com/watch?v=uaBITnxPLUM"
+  },
+  {
+    "time": "2026-10-13T16:45:02+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "eDe4hv75Zos",
+    "title": "कैसे तैयार करें अंग्रेजी ? | STET | ENGLISH STRATEGY VIDEO | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 26.59,
+    "views": 18810,
+    "vph": 335.9,
+    "age_hours": 56.0,
+    "published_at": "2026-10-11T08:45:09+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=eDe4hv75Zos"
   }
 ]
