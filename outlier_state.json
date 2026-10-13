@@ -579,9 +579,14 @@
       "notified": true,
       "score": 198.07,
       "ts": "2026-10-10T15:30:21+00:00"
+    },
+    "zh_1kBwFek4": {
+      "notified": true,
+      "score": 2.59,
+      "ts": "2026-10-13T08:56:06+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-12",
-  "last_publish_utc": "2026-10-13T01:49:16+00:00",
+  "last_heartbeat_ist_date": "2026-10-13",
+  "last_publish_utc": "2026-10-13T08:56:06+00:00",
   "version": 2
 }
