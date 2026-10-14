@@ -230,6 +230,11 @@
       "score": 4.22,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "NiamMLTjXJI": {
+      "notified": true,
+      "score": 2.82,
+      "ts": "2026-10-14T19:57:54+00:00"
+    },
     "QNIQZ_iCltg": {
       "notified": false,
       "score": 4.96,
@@ -607,6 +612,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-14",
-  "last_publish_utc": "2026-10-14T15:53:44+00:00",
+  "last_publish_utc": "2026-10-14T19:57:54+00:00",
   "version": 2
 }
