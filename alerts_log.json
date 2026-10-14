@@ -2480,5 +2480,35 @@
     "published_at": "2026-10-05T15:00:09+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=BV7Oo5ezaxo"
+  },
+  {
+    "time": "2026-10-14T15:53:44+00:00",
+    "channel": "SSC English With Yash",
+    "channel_id": "UCsXgdKeU6ztmqaT3Sj6DbFA",
+    "tier": "own",
+    "video_id": "DX8rXeWk-oE",
+    "title": "How I Scored 158.75 🏆 in SSC Steno 2026 | First Attempt Strategy 🎯",
+    "score": 3.68,
+    "views": 1758,
+    "vph": 141.9,
+    "age_hours": 12.4,
+    "published_at": "2026-10-14T03:30:17+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=DX8rXeWk-oE"
+  },
+  {
+    "time": "2026-10-14T15:53:44+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "1EoLAMABxlQ",
+    "title": "PRACTICE SET - 09 | SUPER TET | @nirbhayenglish  | LEARN ENGLISH WITH NIRBHAY | BY NIRBHAY SIR",
+    "score": 3.92,
+    "views": 2729,
+    "vph": 101.5,
+    "age_hours": 26.9,
+    "published_at": "2026-10-13T13:00:10+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=1EoLAMABxlQ"
   }
 ]
