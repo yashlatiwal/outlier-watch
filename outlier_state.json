@@ -232,8 +232,8 @@
     },
     "NiamMLTjXJI": {
       "notified": true,
-      "score": 2.82,
-      "ts": "2026-10-14T19:57:54+00:00"
+      "score": 5.19,
+      "ts": "2026-10-15T06:57:12+00:00"
     },
     "QNIQZ_iCltg": {
       "notified": false,
@@ -616,7 +616,7 @@
       "ts": "2026-10-13T08:56:06+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-10-14",
-  "last_publish_utc": "2026-10-15T01:38:40+00:00",
+  "last_heartbeat_ist_date": "2026-10-15",
+  "last_publish_utc": "2026-10-15T06:57:12+00:00",
   "version": 2
 }
