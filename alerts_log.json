@@ -2630,5 +2630,35 @@
     "published_at": "2026-10-17T05:34:09+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=5lfrAd2YA3o"
+  },
+  {
+    "time": "2026-10-17T16:49:55+00:00",
+    "channel": "SSC English With Yash",
+    "channel_id": "UCsXgdKeU6ztmqaT3Sj6DbFA",
+    "tier": "own",
+    "video_id": "DX8rXeWk-oE",
+    "title": "How I Scored 158.75 🏆 in SSC Steno 2026 | First Attempt Strategy 🎯",
+    "score": 8.46,
+    "views": 5181,
+    "vph": 60.7,
+    "age_hours": 85.3,
+    "published_at": "2026-10-14T03:30:17+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=DX8rXeWk-oE"
+  },
+  {
+    "time": "2026-10-17T16:49:55+00:00",
+    "channel": "Learn English with Nirbhay",
+    "channel_id": "UC1qAbNMLye-UPWrLXgKVT0Q",
+    "tier": "direct",
+    "video_id": "GUoZsUwyFbI",
+    "title": "2018 और 2019 में ENGLISH में पुछे गए ये QUESTIONS | STET | PYQs | LEARN ENGLISH WITH NIRBHAY |",
+    "score": 2.58,
+    "views": 3398,
+    "vph": 434.0,
+    "age_hours": 7.8,
+    "published_at": "2026-10-17T09:00:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=GUoZsUwyFbI"
   }
 ]
