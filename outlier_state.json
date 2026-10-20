@@ -182,8 +182,8 @@
     },
     "GUoZsUwyFbI": {
       "notified": true,
-      "score": 4.98,
-      "ts": "2026-10-18T21:14:52+00:00"
+      "score": 6.59,
+      "ts": "2026-10-20T03:24:13+00:00"
     },
     "H2tfgtOiwrg": {
       "notified": false,
@@ -637,6 +637,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-19",
-  "last_publish_utc": "2026-10-19T20:21:15+00:00",
+  "last_publish_utc": "2026-10-20T03:24:13+00:00",
   "version": 2
 }
