@@ -127,8 +127,8 @@
     },
     "DX8rXeWk-oE": {
       "notified": true,
-      "score": 8.46,
-      "ts": "2026-10-17T16:49:55+00:00"
+      "score": 11.03,
+      "ts": "2026-10-26T23:33:42+00:00"
     },
     "E2HUZxDSyfo": {
       "notified": true,
@@ -652,6 +652,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-26",
-  "last_publish_utc": "2026-10-26T19:44:12+00:00",
+  "last_publish_utc": "2026-10-26T23:33:42+00:00",
   "version": 2
 }
