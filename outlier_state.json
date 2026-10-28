@@ -320,6 +320,11 @@
       "score": 13.74,
       "ts": "2026-09-30T14:46:56+00:00"
     },
+    "Vn0okZOY110": {
+      "notified": false,
+      "score": 5.96,
+      "ts": "2026-10-28T16:47:52+00:00"
+    },
     "VstAM_r7U5g": {
       "notified": false,
       "score": 6.78,
@@ -652,6 +657,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-28",
-  "last_publish_utc": "2026-10-28T10:29:22+00:00",
+  "last_publish_utc": "2026-10-28T16:47:52+00:00",
   "version": 2
 }
