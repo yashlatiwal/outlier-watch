@@ -602,8 +602,8 @@
     },
     "ogNG7EnS6r8": {
       "notified": false,
-      "score": 4.99,
-      "ts": "2026-10-29T20:03:30+00:00"
+      "score": 6.55,
+      "ts": "2026-10-30T22:46:43+00:00"
     },
     "pFktxpIngRU": {
       "notified": true,
@@ -677,6 +677,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-30",
-  "last_publish_utc": "2026-10-30T18:43:07+00:00",
+  "last_publish_utc": "2026-10-30T22:46:43+00:00",
   "version": 2
 }
