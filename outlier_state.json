@@ -197,8 +197,8 @@
     },
     "GtLEIRG4R14": {
       "notified": true,
-      "score": 3.31,
-      "ts": "2026-10-29T20:03:30+00:00"
+      "score": 5.22,
+      "ts": "2026-10-30T13:18:30+00:00"
     },
     "H2tfgtOiwrg": {
       "notified": false,
@@ -677,6 +677,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-10-30",
-  "last_publish_utc": "2026-10-30T06:11:51+00:00",
+  "last_publish_utc": "2026-10-30T13:18:30+00:00",
   "version": 2
 }
