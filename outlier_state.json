@@ -397,8 +397,8 @@
     },
     "ZQlybEw6YsM": {
       "notified": true,
-      "score": 9.45,
-      "ts": "2026-11-01T15:44:24+00:00"
+      "score": 12.43,
+      "ts": "2026-11-01T20:09:50+00:00"
     },
     "_7EP5_22J_Q": {
       "notified": false,
@@ -687,6 +687,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-01",
-  "last_publish_utc": "2026-11-01T15:44:24+00:00",
+  "last_publish_utc": "2026-11-01T20:09:50+00:00",
   "version": 2
 }
