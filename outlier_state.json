@@ -485,6 +485,11 @@
       "score": 6.92,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "fPuK6B8dspM": {
+      "notified": false,
+      "score": 4.39,
+      "ts": "2026-11-03T11:36:49+00:00"
+    },
     "gzNajhiOE-4": {
       "notified": false,
       "score": 3.89,
@@ -692,6 +697,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-03",
-  "last_publish_utc": "2026-11-03T03:35:14+00:00",
+  "last_publish_utc": "2026-11-03T11:36:49+00:00",
   "version": 2
 }
