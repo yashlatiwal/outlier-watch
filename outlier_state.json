@@ -122,8 +122,8 @@
     },
     "BJ57sqOmm2s": {
       "notified": false,
-      "score": 4.2,
-      "ts": "2026-11-05T17:11:08+00:00"
+      "score": 5.52,
+      "ts": "2026-11-06T11:18:32+00:00"
     },
     "BV7Oo5ezaxo": {
       "notified": true,
@@ -711,7 +711,7 @@
       "ts": "2026-10-13T08:56:06+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-11-05",
-  "last_publish_utc": "2026-11-06T03:09:45+00:00",
+  "last_heartbeat_ist_date": "2026-11-06",
+  "last_publish_utc": "2026-11-06T11:18:32+00:00",
   "version": 2
 }
