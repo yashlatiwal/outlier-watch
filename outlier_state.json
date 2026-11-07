@@ -280,6 +280,11 @@
       "score": 4.22,
       "ts": "2026-09-21T11:23:43+00:00"
     },
+    "NdxQMWX7UaY": {
+      "notified": false,
+      "score": 4.14,
+      "ts": "2026-11-07T20:24:19+00:00"
+    },
     "NiamMLTjXJI": {
       "notified": true,
       "score": 5.19,
@@ -727,6 +732,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-07",
-  "last_publish_utc": "2026-11-07T16:05:35+00:00",
+  "last_publish_utc": "2026-11-07T20:24:19+00:00",
   "version": 2
 }
