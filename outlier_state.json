@@ -502,8 +502,8 @@
     },
     "fPuK6B8dspM": {
       "notified": true,
-      "score": 9.61,
-      "ts": "2026-11-05T08:56:43+00:00"
+      "score": 12.58,
+      "ts": "2026-11-07T09:54:17+00:00"
     },
     "gzNajhiOE-4": {
       "notified": false,
@@ -721,7 +721,7 @@
       "ts": "2026-10-13T08:56:06+00:00"
     }
   },
-  "last_heartbeat_ist_date": "2026-11-06",
-  "last_publish_utc": "2026-11-07T03:00:00+00:00",
+  "last_heartbeat_ist_date": "2026-11-07",
+  "last_publish_utc": "2026-11-07T09:54:17+00:00",
   "version": 2
 }
