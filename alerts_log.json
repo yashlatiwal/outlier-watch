@@ -3185,5 +3185,35 @@
     "published_at": "2026-10-29T08:16:56+00:00",
     "notified": true,
     "url": "https://www.youtube.com/watch?v=fPuK6B8dspM"
+  },
+  {
+    "time": "2026-11-07T16:05:35+00:00",
+    "channel": "SSC English With Yash",
+    "channel_id": "UCsXgdKeU6ztmqaT3Sj6DbFA",
+    "tier": "own",
+    "video_id": "oDwHfKHZRiE",
+    "title": "Why You Should NOT Read Editorials for SSC! 😱",
+    "score": 3.32,
+    "views": 986,
+    "vph": 3.9,
+    "age_hours": 250.1,
+    "published_at": "2026-10-28T06:01:07+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=oDwHfKHZRiE"
+  },
+  {
+    "time": "2026-11-07T16:05:35+00:00",
+    "channel": "Apni Pariksha",
+    "channel_id": "UC-y-rBa2zPTPn5uDQ0AQ6uA",
+    "tier": "direct",
+    "video_id": "KGspzgWPsU8",
+    "title": "How I Cleared SSC Stenographer Skill Test | Complete Strategy | SSC STENO 2026 SKILL TEST ",
+    "score": 2.9,
+    "views": 1543,
+    "vph": 164.8,
+    "age_hours": 9.4,
+    "published_at": "2026-11-07T06:43:57+00:00",
+    "notified": true,
+    "url": "https://www.youtube.com/watch?v=KGspzgWPsU8"
   }
 ]
