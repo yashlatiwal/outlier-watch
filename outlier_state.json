@@ -442,8 +442,8 @@
     },
     "_RIEky4aG1E": {
       "notified": true,
-      "score": 2.55,
-      "ts": "2026-11-07T23:47:24+00:00"
+      "score": 4.57,
+      "ts": "2026-11-08T21:18:02+00:00"
     },
     "_UjwAHSDCg0": {
       "notified": false,
@@ -742,6 +742,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-08",
-  "last_publish_utc": "2026-11-08T17:12:11+00:00",
+  "last_publish_utc": "2026-11-08T21:18:02+00:00",
   "version": 2
 }
