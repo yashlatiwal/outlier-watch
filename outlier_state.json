@@ -687,8 +687,8 @@
     },
     "pjuqodnoNWY": {
       "notified": true,
-      "score": 5.32,
-      "ts": "2026-11-18T02:06:26+00:00"
+      "score": 7.15,
+      "ts": "2026-11-18T18:59:28+00:00"
     },
     "qG4DC_OFFLo": {
       "notified": true,
@@ -742,8 +742,8 @@
     },
     "xxVClrJ_ef8": {
       "notified": true,
-      "score": 3.02,
-      "ts": "2026-11-18T02:06:26+00:00"
+      "score": 4.3,
+      "ts": "2026-11-18T18:59:28+00:00"
     },
     "y9ztE_87pEU": {
       "notified": true,
@@ -762,6 +762,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-18",
-  "last_publish_utc": "2026-11-18T10:29:10+00:00",
+  "last_publish_utc": "2026-11-18T18:59:28+00:00",
   "version": 2
 }
