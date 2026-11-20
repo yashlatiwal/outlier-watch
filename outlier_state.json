@@ -290,6 +290,11 @@
       "score": 5.47,
       "ts": "2026-11-07T23:47:24+00:00"
     },
+    "Ne-dhTKBMRs": {
+      "notified": true,
+      "score": 2.64,
+      "ts": "2026-11-20T00:50:46+00:00"
+    },
     "NiamMLTjXJI": {
       "notified": true,
       "score": 5.19,
@@ -762,6 +767,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-19",
-  "last_publish_utc": "2026-11-19T18:28:54+00:00",
+  "last_publish_utc": "2026-11-20T00:50:46+00:00",
   "version": 2
 }
