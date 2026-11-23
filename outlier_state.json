@@ -110,11 +110,6 @@
       "score": 5.27,
       "ts": "2026-09-30T07:57:51+00:00"
     },
-    "FVQFKCwqDQM": {
-      "notified": false,
-      "score": 6.11,
-      "ts": "2026-09-23T22:02:55+00:00"
-    },
     "FfjAO4Zn_Ks": {
       "notified": true,
       "score": 9.1,
@@ -230,11 +225,6 @@
       "score": 3.59,
       "ts": "2026-11-10T01:58:49+00:00"
     },
-    "Qi-Z5HTwFBA": {
-      "notified": false,
-      "score": 7.33,
-      "ts": "2026-09-24T00:42:24+00:00"
-    },
     "Qp7AjdoT-t4": {
       "notified": true,
       "score": 4.03,
@@ -270,11 +260,6 @@
       "score": 6.78,
       "ts": "2026-09-28T12:54:33+00:00"
     },
-    "W2AfPsGS_OY": {
-      "notified": true,
-      "score": 2.65,
-      "ts": "2026-09-23T22:02:55+00:00"
-    },
     "Wg4Vguj6uTA": {
       "notified": true,
       "score": 15.44,
@@ -305,11 +290,6 @@
       "score": 4.83,
       "ts": "2026-10-25T14:47:55+00:00"
     },
-    "ZNmkeFeQuC8": {
-      "notified": true,
-      "score": 3.38,
-      "ts": "2026-09-23T22:02:55+00:00"
-    },
     "ZQlybEw6YsM": {
       "notified": true,
       "score": 12.43,
@@ -329,11 +309,6 @@
       "notified": false,
       "score": 5.77,
       "ts": "2026-09-24T19:47:37+00:00"
-    },
-    "bsOkMt1T4gU": {
-      "notified": true,
-      "score": 2.64,
-      "ts": "2026-09-24T00:42:24+00:00"
     },
     "dhxiDRT8auE": {
       "notified": true,
@@ -527,6 +502,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-22",
-  "last_publish_utc": "2026-11-22T21:31:14+00:00",
+  "last_publish_utc": "2026-11-23T02:14:02+00:00",
   "version": 2
 }
