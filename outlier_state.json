@@ -430,11 +430,6 @@
       "score": 5.43,
       "ts": "2026-11-04T21:23:39+00:00"
     },
-    "uwVeViaIDzs": {
-      "notified": true,
-      "score": 11.53,
-      "ts": "2026-09-25T17:25:03+00:00"
-    },
     "w8NzA24Jd3o": {
       "notified": true,
       "score": 13.88,
@@ -467,6 +462,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-24",
-  "last_publish_utc": "2026-11-24T06:44:34+00:00",
+  "last_publish_utc": "2026-11-24T18:37:52+00:00",
   "version": 2
 }
