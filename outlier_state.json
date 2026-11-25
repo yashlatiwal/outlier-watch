@@ -20,11 +20,6 @@
       "score": 6.97,
       "ts": "2026-10-08T13:52:47+00:00"
     },
-    "30h3a9gjGnQ": {
-      "notified": true,
-      "score": 10.07,
-      "ts": "2026-09-25T20:37:46+00:00"
-    },
     "4W8bz35pLsE": {
       "notified": false,
       "score": 5.64,
@@ -462,6 +457,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-24",
-  "last_publish_utc": "2026-11-24T18:37:52+00:00",
+  "last_publish_utc": "2026-11-25T02:55:29+00:00",
   "version": 2
 }
