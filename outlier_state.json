@@ -250,11 +250,6 @@
       "score": 5.96,
       "ts": "2026-10-28T16:47:52+00:00"
     },
-    "VstAM_r7U5g": {
-      "notified": false,
-      "score": 6.78,
-      "ts": "2026-09-28T12:54:33+00:00"
-    },
     "Wg4Vguj6uTA": {
       "notified": true,
       "score": 15.44,
@@ -457,6 +452,6 @@
     }
   },
   "last_heartbeat_ist_date": "2026-11-27",
-  "last_publish_utc": "2026-11-27T04:46:25+00:00",
+  "last_publish_utc": "2026-11-27T14:41:22+00:00",
   "version": 2
 }
